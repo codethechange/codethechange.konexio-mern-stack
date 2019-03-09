@@ -7,7 +7,7 @@ import reduxThunk from 'redux-thunk';
 
 import App from './components/app';
 import Home from './components/home';
-import Public from './components/public';
+import Public from './components/myConnections';
 import Account from './components/account';
 import Signin from './components/auth/signin';
 import Signup from './components/auth/signup';

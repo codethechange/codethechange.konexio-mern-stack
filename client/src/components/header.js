@@ -25,27 +25,49 @@ class Header extends Component {
         }
     }
     render() {
-        return (
-            <nav className="navbar navbar-expand-sm navbar-light bg-light">
-                <NavLink className="navbar-brand" to="/">Konexio</NavLink>
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav mr-auto">
-                        <li className="nav-item">
-                            <NavLink className="nav-link" to="/public">Public</NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink className="nav-link" to="/account">Account</NavLink>
-                        </li>
-                    </ul>
-                    <ul className="navbar-nav">
-                        {this.renderSignButton()}
-                    </ul>
-                </div>
-            </nav>
-        )
+        if(this.props.authenticated){
+            return (
+                <nav className="navbar navbar-expand-sm navbar-light bg-light">
+                    <NavLink className="navbar-brand" to="/">Konexio</NavLink>
+                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                    <div className="collapse navbar-collapse" id="navbarNav">
+                        <ul className="navbar-nav mr-auto">
+                            <li className="nav-item">
+                                <NavLink className="nav-link" to="/myConnections">My Connections</NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink className="nav-link" to="/account">Account</NavLink>
+                            </li>
+                        </ul>
+                        <ul className="navbar-nav">
+                            {this.renderSignButton()}
+                        </ul>
+                    </div>
+                </nav>
+            )
+        } else{
+            return(
+                <nav className="navbar navbar-expand-sm navbar-light bg-light">
+                    <NavLink className="navbar-brand" to="/">Konexio</NavLink>
+                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                    <div className="collapse navbar-collapse" id="navbarNav">
+                        <ul className="navbar-nav mr-auto">
+                            <li className="nav-item">
+                                <NavLink className="nav-link" to="/account">Account</NavLink>
+                            </li>
+                        </ul>
+                        <ul className="navbar-nav">
+                            {this.renderSignButton()}
+                        </ul>
+                    </div>
+                </nav>
+            )
+        }
+        
     }
 }
 

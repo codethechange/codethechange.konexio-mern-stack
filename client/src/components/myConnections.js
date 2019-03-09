@@ -4,7 +4,7 @@ export default class Public extends Component {
   render() {
     return (
       <div>
-      <h1>Public</h1>
+      <h1>My Connections</h1>
       </div>
     );
   }
