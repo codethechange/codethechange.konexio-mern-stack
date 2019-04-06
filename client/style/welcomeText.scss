@@ -1,0 +1,39 @@
+#container {
+  display: flex;
+  /* establish flex container */
+  flex-direction: column;
+  /* stack flex items vertically */
+  align-items: center;
+  /* center items horizontally, in this case */
+  padding-top: 10px;
+}
+
+.welcome-container {
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.welcome-text-main {
+  font-family: Comfortaa;
+  font-size: 64px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 2.3px;
+  color: #2075bc;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+.welcome-text-submain {
+  font-family: Comfortaa;
+  font-size: 32px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1.1px;
+  color: #3fabe1;
+  text-align: center;
+}

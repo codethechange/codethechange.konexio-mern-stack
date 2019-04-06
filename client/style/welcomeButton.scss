@@ -1,0 +1,59 @@
+.mentor-button {
+  width: 431px;
+  height: 80px;
+  background-color: #48aee2;
+}
+
+.mentor-button-text {
+  width: 261.5px;
+  height: 78px;
+  font-family: Open Sans, Arial, sans-serif;
+  font-size: 26px;
+  font-weight: lighter;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+.mentee-button {
+  width: 431px;
+  height: 80px;
+  background-color: #2075bc;
+}
+
+.mentee-button-text {
+  width: 300px;
+  height: 80px;
+  font-family: Open Sans, Arial, sans-serif;
+  font-size: 26px;
+  font-weight: lighter;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+.mentor-container {
+  display: inline-block;
+  position: relative;
+  margin-right: 41px;
+  margin-top: 30px;
+}
+
+.mentee-container {
+  display: inline-block;
+  position: relative;
+  margin-left: 41px;
+  margin-top: 30px;
+}
+
+.button-container {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}

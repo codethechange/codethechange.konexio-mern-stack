@@ -7,6 +7,8 @@ import reduxThunk from 'redux-thunk';
 
 import App from './components/app';
 import Home from './components/home';
+import WelcomeButton from './components/welcomeButton';
+import WelcomeText from './components/welcomeText';
 import Public from './components/myConnections';
 import Account from './components/account';
 import Signin from './components/auth/signin';
@@ -16,7 +18,10 @@ import RequireAuth from './components/auth/require_auth';
 import reducers from './reducers';
 import { AUTH_USER } from './actions/types';
 
-import '../style/style.scss'
+import '../style/style.scss';
+import '../style/home.scss';
+import '../style/welcomeButton.scss';
+import '../style/welcomeText.scss';
 
 const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
 const store = createStoreWithMiddleware(reducers)

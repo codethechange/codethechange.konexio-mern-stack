@@ -6,9 +6,9 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
     entry: {
         app: './src/app.js',
-        vender: [ 
-            'react', 'react-dom', 'redux', 
-            'react-redux', 'react-router-dom', 
+        vender: [
+            'react', 'react-dom', 'redux',
+            'react-redux', 'react-router-dom',
             'axios', 'prop-types' ]
     },
     output: {
@@ -34,6 +34,17 @@ module.exports = {
                         }
                     },'sass-loader'],
                 })
+            },
+            {
+              test: /\.(png|jpg|gif)$/i,
+              use: [
+                {
+                loader: 'url-loader',
+                  options: {
+                    limit: 8192
+                  }
+                }
+              ]
             }
         ]
     },
