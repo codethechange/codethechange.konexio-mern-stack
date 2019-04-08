@@ -126,16 +126,17 @@ class Signup extends Component {
                             required/>
                     </div>
                     <div className="form-group">
-                      <label for="course">Konexio Course:</label>
-                      <select class="form-control form-control-lg" id="course">
-                        <option selected>Choose...</option>
-                        <option>Course 1</option>
-                        <option>Course 2</option>
-                        <option>Course 3</option>
-                      </select>
+                        <label>Name of Organization:</label>
+                        <Field
+                            name="org"
+                            type='text'
+                            component="input"
+                            className="form-control form-control-lg"
+                            placeholder="Name of Organization"
+                            required/>
                     </div>
                     <div>
-                      <label>What skills would you like to develop?</label>
+                      <label>What skills in a mentee do you seek/are you willing to help develop?</label>
                     </div>
                     <div class="checkbox">
                       <label><input type="checkbox" value=""/>  Computer Literacy</label>
@@ -176,22 +177,6 @@ class Signup extends Component {
                       </select>
                     </div>
 
-                    <div class="form-group">
-                        <label class="control-label col-md-5">Asylum Status:</label>
-                        <div class="col-md-4">
-                            <label class="radio-inline control-label">
-                                <input checked="checked" id="asylumStatusSeeker" name="asylumStatus" type="radio" value="seeker"/> Asylum Seeker
-                            </label>
-                            <label class="radio-inline control-label">
-                                <input id="asylumStatusRefugee" name="asylumStatus" type="radio" value="refugee"/> Refugee
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                      <label for="resume">Submit a Resume (Optional):</label>
-                      <input type="file" class="form-control-file" id="resume"/>
-                    </div>
                     <div className="form-group">
                         <label>Create Username:</label>
                         <Field
