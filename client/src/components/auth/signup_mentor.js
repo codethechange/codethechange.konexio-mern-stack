@@ -3,6 +3,7 @@ import {reduxForm, Field} from 'redux-form';
 import {connect} from 'react-redux';
 import {signUserUp} from '../../actions';
 import CenterCard363 from '../centerCard363';
+import Signup from './signup';
 
 class Signup extends Component {
     renderAlert(error) {
@@ -199,7 +200,7 @@ class Signup extends Component {
                         />
                     </div>
                     <div className="form-group">
-                        <label>Comfirm Password:</label>
+                        <label>Confirm Password:</label>
                         <Field
                             type='password'
                             name="password2"
@@ -237,4 +238,4 @@ function mapStateToProps({auth}) {
 export default connect(mapStateToProps, {signUserUp})(reduxForm({
     form: 'signup',
     validate
-})(Signup));
+})(SignUp));

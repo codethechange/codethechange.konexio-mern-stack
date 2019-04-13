@@ -16,9 +16,6 @@ class Header extends Component {
                 [
                     <li className="nav-item" key="1">
                         <NavLink to="/signin" className="nav-link">Sign in</NavLink>
-                    </li>,
-                    <li className="nav-item" key="2">
-                        <NavLink to="/signup" className="nav-link">Sign Up</NavLink>
                     </li>
                 ]
             )
@@ -55,11 +52,7 @@ class Header extends Component {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNav">
-                        <ul className="navbar-nav mr-auto">
-                            <li className="nav-item">
-                                <NavLink className="nav-link" to="/account">Account</NavLink>
-                            </li>
-                        </ul>
+                        <ul className="navbar-nav mr-auto"></ul>
                         <ul className="navbar-nav">
                             {this.renderSignButton()}
                         </ul>
@@ -67,7 +60,7 @@ class Header extends Component {
                 </nav>
             )
         }
-        
+
     }
 }
 
