@@ -12,7 +12,8 @@ import WelcomeText from "./components/welcomeText";
 import Public from "./components/myConnections";
 import Account from "./components/account";
 import Signin from "./components/auth/signin";
-import Signup from "./components/auth/signup";
+import SignupMentee from "./components/auth/signup";
+import SignupMentor from "./components/auth/signup_mentor";
 import Signout from "./components/auth/signout";
 import ChooseAccountType from "./components/chooseAccountType";
 import RequireAuth from "./components/auth/require_auth";
@@ -42,8 +43,8 @@ ReactDOM.render(
           <Route path="/account" component={RequireAuth(Account)} />
           <Route path="/signin" component={Signin} />
           <Route path="/signup" component={ChooseAccountType} />
-          <Route path="/signup-mentee" component={Signup} />
-          <Route path="/signup-mentor" component={Signup} />
+          <Route path="/signup-mentee" component={SignupMentee} />
+          <Route path="/signup-mentor" component={SignupMentor} />
           <Route path="/signout" component={Signout} />
         </Switch>
       </App>
