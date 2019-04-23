@@ -196,6 +196,43 @@ class SignupMentee extends Component {
                   </label>
                 </div>
               </div>
+              <div>
+                <label class="control-label col-md-8">
+                  How would your rate your ability to use a computer?
+                  </label>
+              </div>
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-secondary active">
+                  <input type="radio" name="options" id="option1" autocomplete="off" checked/> 1
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option2" autocomplete="off"/> 2
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option3" autocomplete="off"/> 3
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option3" autocomplete="off"/> 4
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option3" autocomplete="off"/> 5
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option3" autocomplete="off"/> 6
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option3" autocomplete="off"/> 7
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option3" autocomplete="off"/> 8
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option3" autocomplete="off"/> 9
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option3" autocomplete="off"/> 10
+                </label>
+              </div>
 
               <div className="form-group">
                 <label for="country">Country of Origin:</label>
@@ -258,7 +295,7 @@ class SignupMentee extends Component {
                   required
                 />
               </div>
-              
+
               {this.renderAlert()}
               <div style={{ paddingTop: "30px" }}>
                 <button
