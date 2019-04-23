@@ -4,7 +4,7 @@ import User from '../models/user';
 export default {
     signup : (req, res, next) => {
         const { email, password, firstName, lastName } = req.body;
-    
+
         if (!email || !password) {
             return res
                 .status(422)
@@ -22,18 +22,18 @@ export default {
                 }
                 const user = new User({
                     name: {
-                        first: firstName, 
+                        first: firstName,
                         last: lastName
                     },
                     email: email,
                     password: password
                 })
-    
+
                 user.save(function (err, savedUser) {
                     if (err) {
                         return next(err)
                     }
-    
+
                     res.json({
                         success: true,
                         token: token.generateToken(savedUser)
@@ -41,7 +41,7 @@ export default {
                 })
             })
     },
-    
+
     signin: (req, res, next) => {
         const email = req.body.email;
         const password = req.body.password;
@@ -62,7 +62,7 @@ export default {
                         if (err || !good) {
                                 return res.status(401).send(err || 'User not found')
                             }
-    
+
                             res.send({
                                 token: token.generateToken(existingUser)
                             })
@@ -77,14 +77,14 @@ export default {
             const userId = req.user._id;
             const newProfile = {
                 name: {
-                    first: req.body.firstName, 
+                    first: req.body.firstName,
                     last: req.body.lastName
                 }
             };
             delete newProfile.email;
             delete newProfile.phone;
             delete newProfile.password;
-            
+
             User.findByIdAndUpdate(userId, newProfile, {new: true})
             .then(newUser=>{
                 res.sendStatus(200);
@@ -92,5 +92,5 @@ export default {
             .catch(next)
         })
     }
-    
+
 }

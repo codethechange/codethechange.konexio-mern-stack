@@ -146,32 +146,32 @@ class SignupMentor extends Component {
               </div>
               <div class="checkbox">
                 <label>
-                  <input type="checkbox" value="" /> Computer Literacy
+                  <input type="checkbox" value="" /> I want to learn how to use a computer
                 </label>
               </div>
               <div class="checkbox">
                 <label>
-                  <input type="checkbox" value="" /> Coding
+                  <input type="checkbox" value="" /> I want to learn how to code
                 </label>
               </div>
               <div class="checkbox">
                 <label>
-                  <input type="checkbox" value="" /> Education
+                  <input type="checkbox" value="" /> I want to improve my level of education
                 </label>
               </div>
               <div class="checkbox">
                 <label>
-                  <input type="checkbox" value="" /> Leadership & Communication
+                  <input type="checkbox" value="" /> I want to know how to communicate and be a leader
                 </label>
               </div>
               <div class="checkbox">
                 <label>
-                  <input type="checkbox" value="" /> Personal Development
+                  <input type="checkbox" value="" /> I want to better myself
                 </label>
               </div>
               <div class="checkbox">
                 <label>
-                  <input type="checkbox" value="" /> Other
+                  <input type="checkbox" value="" /> I want to do something else:
                 </label>
               </div>
 
@@ -179,7 +179,7 @@ class SignupMentor extends Component {
                 <label class="control-label col-md-8">
                   Are you comfortable using a computer on your own?
                 </label>
-                <div class="col-md-2">
+                <div class="col-md-12">
                   <label class="radio-inline control-label">
                     <input
                       checked="checked"
@@ -211,17 +211,6 @@ class SignupMentor extends Component {
               </div>
 
               <div className="form-group">
-                <label>Create Username:</label>
-                <Field
-                  name="username"
-                  type="text"
-                  component="input"
-                  className="form-control form-control-lg"
-                  placeholder="Username"
-                  required
-                />
-              </div>
-              <div className="form-group">
                 <label>Password:</label>
                 <Field
                   type="password"
@@ -232,6 +221,7 @@ class SignupMentor extends Component {
                   required
                 />
               </div>
+
               <div className="form-group">
                 <label>Confirm Password:</label>
                 <Field
@@ -243,6 +233,7 @@ class SignupMentor extends Component {
                   required
                 />
               </div>
+
               {this.renderAlert()}
               <div style={{ paddingTop: "30px" }}>
                 <button

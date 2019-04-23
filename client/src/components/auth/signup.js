@@ -234,17 +234,7 @@ class SignupMentee extends Component {
                 <label for="resume">Submit a Resume (Optional):</label>
                 <input type="file" class="form-control-file" id="resume" />
               </div>
-              <div className="form-group">
-                <label>Create Username:</label>
-                <Field
-                  name="username"
-                  type="text"
-                  component="input"
-                  className="form-control form-control-lg"
-                  placeholder="Username"
-                  required
-                />
-              </div>
+
               <div className="form-group">
                 <label>Password:</label>
                 <Field
@@ -256,6 +246,7 @@ class SignupMentee extends Component {
                   required
                 />
               </div>
+
               <div className="form-group">
                 <label>Confirm Password:</label>
                 <Field
@@ -267,6 +258,7 @@ class SignupMentee extends Component {
                   required
                 />
               </div>
+              
               {this.renderAlert()}
               <div style={{ paddingTop: "30px" }}>
                 <button

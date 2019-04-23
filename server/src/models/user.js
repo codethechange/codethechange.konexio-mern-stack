@@ -16,7 +16,6 @@ const userSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     },
-    password: String,
     phone: {
         number: {
             type: String
@@ -25,7 +24,37 @@ const userSchema = new mongoose.Schema({
             type: Boolean,
             default: false
         }
-    }
+    },
+    age: Number,
+    gender: String,
+    languages: String,
+    course: String,
+    skills: {
+      computerLiteracy: {
+        type: Boolean,
+        default: false
+      },
+      coding: {
+        type: Boolean,
+        default: false
+      },
+      education: {
+        type: Boolean,
+        default: false
+      },
+      leadership: {
+        type: Boolean,
+        default: false
+      },
+      personalDevelopment: {
+        type: Boolean,
+        default: false
+      }
+    },
+    computerSkill: Boolean,
+    countryOfOrigin: String,
+    asylumStatus: String,
+    password: String
 })
 
 userSchema.pre('save', function(next){
