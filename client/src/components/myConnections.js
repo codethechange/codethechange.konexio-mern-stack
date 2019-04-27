@@ -1,12 +1,12 @@
 // sign in, the my connections OR /public
-
+import { Link } from 'react-router-dom';
 import React, { Component } from 'react';
-//import CenterCard363 from "../centerCard363";
+import CenterCard363 from "./centerCard363";
 
 class MyConnections extends Component {
   render() {
     return (
-      //<CenterCard363>
+      <CenterCard363>
       <div class="container-fluid">
       	<div class="row">
       		<div class="col-md-12">
@@ -60,7 +60,9 @@ class MyConnections extends Component {
       		</div>
       	</div>
       </div>
-      //</CenterCard363>
+      </CenterCard363>
     );
   }
 }
+
+export default MyConnections;
