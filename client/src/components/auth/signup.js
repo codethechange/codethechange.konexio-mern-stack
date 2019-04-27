@@ -3,6 +3,7 @@ import { reduxForm, Field } from "redux-form";
 import { connect } from "react-redux";
 import { signUserUp } from "../../actions";
 import CenterCard363 from "../centerCard363";
+import "../../../style/signup.scss";
 
 class SignupMentee extends Component {
   renderAlert(error) {
@@ -25,7 +26,7 @@ class SignupMentee extends Component {
   render() {
     const { handleSubmit } = this.props;
     return (
-      <CenterCard363>
+      //<CenterCard363>
         <div className="card">
           <h4 className="card-header">Sign Up</h4>
           <div className="card-body">
@@ -141,7 +142,7 @@ class SignupMentee extends Component {
               </div>
               <div class="checkbox">
                 <label>
-                  <input type="checkbox" value="" /> Computer Literacy
+                  <input type="checkbox" value="" /> Learning to Use a Computer
                 </label>
               </div>
               <div class="checkbox">
@@ -308,7 +309,7 @@ class SignupMentee extends Component {
             </form>
           </div>
         </div>
-      </CenterCard363>
+      //</CenterCard363>
     );
   }
 }

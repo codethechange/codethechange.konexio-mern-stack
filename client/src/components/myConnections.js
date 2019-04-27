@@ -2,65 +2,65 @@
 import { Link } from 'react-router-dom';
 import React, { Component } from 'react';
 import CenterCard363 from "./centerCard363";
+import profile from '../images/profile_pic.png';
+import "../../style/myConnections.scss";
 
 class MyConnections extends Component {
   render() {
     return (
-      <CenterCard363>
+      //<CenterCard363>
       <div class="container-fluid">
       	<div class="row">
-      		<div class="col-md-12">
+          <div class="col-md-2">
+          </div>
+      		<div class="col-md-8">
       			<div class="jumbotron">
-      				<h2>
+      				<h2 class = "jumbo-header">
       					Welcome
       				</h2>
-      				<p>
+      				<p class = "lg-text">
       					Meet your mentor here.
       				</p>
       			</div>
-      			<div class="row">
-              <div class="col-md-2">
-              </div>
-      				<div class="col-md-4">
-      					<img alt="Bootstrap Image Preview" src="../images/profile_pic.png" />
+            <div class="col-md-2">
+            </div>
+      			<div class="row top-buffer">
+      				<div class="col-md-6">
+      					<img alt="Profile Picture" src={profile} className="resize" />
       				</div>
-              <div class="col-md-1">
-              </div>
-      				<div class="col-md-5">
-      					<h3>
+      				<div class="col-md-6 top-buffer">
+      					<h3 class = "lg-text-blue">
       						FirstName LastName
       					</h3>
-      					<p>
+      					<p class = "info-text">
       						<strong>Company Name</strong><br/>
                   <strong>Email:</strong> email@example<br/>
-                  <strong>Phone Number:</strong>XXX-XXX-XXXX<br/>
+                  <strong>Phone Number:</strong> XXX-XXX-XXXX<br/>
       					</p>
       				</div>
       			</div>
-            <div class="row">
-            </div>
-      			<div class="row">
-              <div class="col-md-2">
+      			<div class="row top-buffer">
+              <div class="col-md-1">
               </div>
       				<div class="col-md-3">
-      					<button type="button" class="btn btn-primary btn-lg btn-block">
+      					<button type="button" class="btn btn-blue btn-block btn-lg">
       						Learn More
       					</button>
       				</div>
-              <div class="col-md-2">
+              <div class="col-md-3">
               </div>
       				<div class="col-md-3">
-      					<button type="button" class="btn btn-primary btn-block btn-lg">
+      					<button type="button" class="btn btn-blue btn-block btn-lg">
       						Contact Now
       					</button>
       				</div>
-              <div class="col-md-2">
+              <div class="col-md-1">
               </div>
       			</div>
       		</div>
       	</div>
       </div>
-      </CenterCard363>
+      //</CenterCard363>
     );
   }
 }
