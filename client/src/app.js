@@ -9,7 +9,7 @@ import App from "./components/app";
 import Home from "./components/home";
 import WelcomeButton from "./components/welcomeButton";
 import WelcomeText from "./components/welcomeText";
-import Public from "./components/myConnections";
+import MyConnections from "./components/myConnections";
 import Account from "./components/account";
 import Signin from "./components/auth/signin";
 import SignupMentee from "./components/auth/signup";
@@ -24,6 +24,9 @@ import "../style/style.scss";
 import "../style/home.scss";
 import "../style/welcomeButton.scss";
 import "../style/welcomeText.scss";
+import "../style/myConnections.scss";
+import "../style/signup.scss";
+
 
 const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
 const store = createStoreWithMiddleware(reducers);
@@ -39,7 +42,8 @@ ReactDOM.render(
       <App>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/public" component={Public} />
+          <Route path="/public" component={MyConnections} />
+          <Route path="/myConnections" component = {RequireAuth(MyConnections)} />
           <Route path="/account" component={RequireAuth(Account)} />
           <Route path="/signin" component={Signin} />
           <Route path="/signup" component={ChooseAccountType} />
