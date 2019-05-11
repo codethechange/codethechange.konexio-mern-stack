@@ -96,6 +96,20 @@ class Account extends Component {
             required
             />
       </div>
+
+      <div className="form-group">
+        <label>Phone Number:</label>
+        <Field
+            name="phoneNumber"
+            type="tel"
+            component="input"
+            className="form-control form-control-lg"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            placeholder="XXX-XXX-XXXX"
+            required
+            />
+       </div>
+
       {dirty && <div className="form-group">
         <label>Password:</label>
         <Field
@@ -124,7 +138,8 @@ function mapStateToProps({auth, user}) {
       initialValues: {
         email: user.profile.email,
         firstName: user.profile.name.first,
-        lastName: user.profile.name.last
+        lastName: user.profile.name.last,
+        phoneNumber: user.profile.phone.number
       },
       updateProfileFailMsg: user.updateProfileFailMsg
   }:{

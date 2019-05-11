@@ -78,7 +78,7 @@ class SignupMentee extends Component {
                   <div className="form-group">
                     <label>Phone Number:</label>
                     <Field
-                      name="phone"
+                      name="phoneNumber"
                       type="tel"
                       component="input"
                       className="form-control form-control-lg"
@@ -128,6 +128,7 @@ class SignupMentee extends Component {
                   required
                 />
               </div>
+
               <div className="form-group">
                 <label for="course">Konexio Course:</label>
                 <select class="form-control form-control-lg" id="course">
@@ -171,32 +172,6 @@ class SignupMentee extends Component {
                 </label>
               </div>
 
-              <div class="form-group">
-                <label class="control-label col-md-8">
-                  Are you comfortable using a computer on your own?
-                </label>
-                <div class="col-md-2">
-                  <label class="radio-inline control-label">
-                    <input
-                      checked="checked"
-                      id="usingComputerYes"
-                      name="usingComputer"
-                      type="radio"
-                      value="yes"
-                    />{" "}
-                    Yes
-                  </label>
-                  <label class="radio-inline control-label">
-                    <input
-                      id="usingComputerNo"
-                      name="usingComputer"
-                      type="radio"
-                      value="no"
-                    />{" "}
-                    No
-                  </label>
-                </div>
-              </div>
               <div>
                 <label class="control-label col-md-8">
                   How would your rate your ability to use a computer?
@@ -266,11 +241,6 @@ class SignupMentee extends Component {
                     Refugee
                   </label>
                 </div>
-              </div>
-
-              <div class="form-group">
-                <label for="resume">Submit a Resume (Optional):</label>
-                <input type="file" class="form-control-file" id="resume" />
               </div>
 
               <div className="form-group">

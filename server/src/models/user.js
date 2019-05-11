@@ -51,7 +51,7 @@ const userSchema = new mongoose.Schema({
         default: false
       }
     },
-    computerSkill: Boolean,
+    computerSkill: Number,
     countryOfOrigin: String,
     asylumStatus: String,
     password: String

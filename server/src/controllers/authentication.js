@@ -26,7 +26,24 @@ export default {
                         last: lastName
                     },
                     email: email,
-                    password: password
+                    password: password,
+                    phone: {
+                        number: phoneNumber
+                    },
+                    age: age,
+                    gender: gender,
+                    languages: languages,
+                    course: course,
+                    skills: skills,
+                    computerSkill: {
+                        computerLiteracy: skill1,
+                        coding: skill2,
+                        education: skill3,
+                        leadership: skill4,
+                        personalDevelopment: skill5
+                    },
+                    countryOfOrigin: countryOfOrigin,
+                    asylumStatus: asylumStatus
                 })
 
                 user.save(function (err, savedUser) {
