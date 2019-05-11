@@ -106,7 +106,9 @@ class SignupMentor extends Component {
                 <div class="col">
                   <div className="form-group">
                     <label for="gender">Gender:</label>
-                    <select class="form-control form-control-lg" id="gender">
+                    <select
+                      className="form-control form-control-lg" id="gender"
+                      name="gender">
                       <option selected>Choose...</option>
                       <option>Male</option>
                       <option>Female</option>

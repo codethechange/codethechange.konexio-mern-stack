@@ -100,6 +100,8 @@ class Account extends Component {
       <div className="form-group">
         <label>Phone Number:</label>
         <Field
+            disabled
+            readOnly
             name="phoneNumber"
             type="tel"
             component="input"
@@ -108,6 +110,32 @@ class Account extends Component {
             placeholder="XXX-XXX-XXXX"
             required
             />
+       </div>
+
+       <div className="form-group">
+         <label>Age:</label>
+         <Field
+           disabled
+           readOnly
+           name="age"
+           type="text"
+           component="input"
+           className="form-control form-control-lg"
+           placeholder="Age"
+           required
+         />
+       </div>
+
+       <div className="form-group">
+         <label for="gender">Gender:</label>
+         <select 
+           className="form-control form-control-lg" id="gender"
+           name="gender">
+           <option selected>Choose...</option>
+           <option>Male</option>
+           <option>Female</option>
+           <option>Other</option>
+         </select>
        </div>
 
       {dirty && <div className="form-group">
@@ -139,7 +167,18 @@ function mapStateToProps({auth, user}) {
         email: user.profile.email,
         firstName: user.profile.name.first,
         lastName: user.profile.name.last,
-        phoneNumber: user.profile.phone.number
+        phoneNumber: user.profile.phone.number,
+        age: user.profile.age,
+        gender: user.profile.gender,
+        languages: user.profile.languages,
+        course: user.profile.course,
+        skill1: user.profile.skills.computerLiteracy,
+        skill2: user.profile.skills.coding,
+        skill3: user.profile.skills.education,
+        skill4: user.profile.skills.leadership,
+        skill5: user.profile.skills.personalDevelopment,
+        countryOfOrigin: user.profile.countryOfOrigin,
+        asylumStatus: user.profile.asylumStatus
       },
       updateProfileFailMsg: user.updateProfileFailMsg
   }:{
