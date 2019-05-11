@@ -9,14 +9,14 @@ export class WelcomeButton extends Component {
         <div className="button-container">
           <div className="mentor-container">
             <Link to="/signup-mentor">
-              <button className="mentor-button">
+              <button type="button" className="btn btn-block btn-lg mentor-button">
                 <span className="mentor-button-text">I am a mentor</span>
               </button>
             </Link>
           </div>
           <div className="mentee-container">
             <Link to="/signup-mentee">
-              <button className="mentee-button">
+              <button type="button" className="btn btn-block btn-lg mentee-button">
                 <span className="mentee-button-text">
                   I am looking for a mentor
                 </span>
