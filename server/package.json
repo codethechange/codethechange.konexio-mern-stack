@@ -13,6 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "bcrypt-nodejs": "^0.0.3",
+    "bson": ">=1.0.5",
     "body-parser": "^1.15.2",
     "cors": "^2.8.1",
     "cross-env": "^5.2.0",
