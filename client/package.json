@@ -28,6 +28,7 @@
     "sass-loader": "^6.0.6",
     "serve": "^9.4.0",
     "style-loader": "^0.20.3",
+    "tar": ">=4.4.2",
     "webpack": "^3.6.0",
     "webpack-dev-server": "^2.8.2",
     "webpack-merge": "^4.1.0"
