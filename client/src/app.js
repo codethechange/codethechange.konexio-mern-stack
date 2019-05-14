@@ -46,6 +46,7 @@ ReactDOM.render(
           <Route path="/signup-mentee" component={SignupMentee} />
           <Route path="/signup-mentor" component={SignupMentor} />
           <Route path="/signout" component={Signout} />
+          <Route path="/temp" component={Public} />
         </Switch>
       </App>
     </HashRouter>
