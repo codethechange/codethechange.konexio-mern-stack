@@ -77,7 +77,7 @@ class SignupMentor extends Component {
                   <div className="form-group">
                     <label>Phone Number:</label>
                     <Field
-                      name="phone"
+                      name="phoneNumber"
                       type="tel"
                       component="input"
                       className="form-control form-control-lg"
@@ -106,7 +106,9 @@ class SignupMentor extends Component {
                 <div class="col">
                   <div className="form-group">
                     <label for="gender">Gender:</label>
-                    <select class="form-control form-control-lg" id="gender">
+                    <select
+                      className="form-control form-control-lg" id="gender"
+                      name="gender">
                       <option selected>Choose...</option>
                       <option>Male</option>
                       <option>Female</option>
@@ -171,35 +173,46 @@ class SignupMentor extends Component {
               </div>
               <div class="checkbox">
                 <label>
-                  <input type="checkbox" value="" /> I want to do something else:
+                  <input type="checkbox" value="" /> I want to do something else
                 </label>
               </div>
 
-              <div class="form-group">
+              <div>
                 <label class="control-label col-md-8">
-                  Are you comfortable using a computer on your own?
+                  How would your rate your ability to use a computer?
+                  </label>
+              </div>
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-secondary active">
+                  <input type="radio" name="options" id="option1" autocomplete="off" checked/> 1
                 </label>
-                <div class="col-md-12">
-                  <label class="radio-inline control-label">
-                    <input
-                      checked="checked"
-                      id="usingComputerYes"
-                      name="usingComputer"
-                      type="radio"
-                      value="yes"
-                    />{" "}
-                    Yes
-                  </label>
-                  <label class="radio-inline control-label">
-                    <input
-                      id="usingComputerNo"
-                      name="usingComputer"
-                      type="radio"
-                      value="no"
-                    />{" "}
-                    No
-                  </label>
-                </div>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option2" autocomplete="off"/> 2
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option3" autocomplete="off"/> 3
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option3" autocomplete="off"/> 4
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option3" autocomplete="off"/> 5
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option3" autocomplete="off"/> 6
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option3" autocomplete="off"/> 7
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option3" autocomplete="off"/> 8
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option3" autocomplete="off"/> 9
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option3" autocomplete="off"/> 10
+                </label>
               </div>
 
               <div className="form-group">

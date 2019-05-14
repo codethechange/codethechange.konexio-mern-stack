@@ -3,7 +3,8 @@ import User from '../models/user';
 
 export default {
     signup : (req, res, next) => {
-        const { email, password, firstName, lastName } = req.body;
+        const { email, password, firstName, lastName, phoneNumber, age, gender, languages, course,
+          skill1, skill2, skill3, skill4, skill5, countryOfOrigin, asylumStatus } = req.body;
 
         if (!email || !password) {
             return res
@@ -26,7 +27,23 @@ export default {
                         last: lastName
                     },
                     email: email,
-                    password: password
+                    password: password,
+                    phone: {
+                        number: phoneNumber
+                    },
+                    age: age,
+                    gender: gender,
+                    languages: languages,
+                    course: course,
+                    skills: {
+                        computerLiteracy: skill1,
+                        coding: skill2,
+                        education: skill3,
+                        leadership: skill4,
+                        personalDevelopment: skill5
+                    },
+                    countryOfOrigin: countryOfOrigin,
+                    asylumStatus: asylumStatus
                 })
 
                 user.save(function (err, savedUser) {
