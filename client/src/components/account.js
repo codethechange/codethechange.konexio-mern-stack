@@ -128,14 +128,124 @@ class Account extends Component {
 
        <div className="form-group">
          <label for="gender">Gender:</label>
-         <select 
-           className="form-control form-control-lg" id="gender"
-           name="gender">
+         <br/>
+         <Field name="gender" component = "select" class="form-control-lg">
            <option selected>Choose...</option>
-           <option>Male</option>
-           <option>Female</option>
-           <option>Other</option>
-         </select>
+           <option value = "male">Male</option>
+           <option value = "female">Female</option>
+           <option value = "other">Other</option>
+         </Field>
+       </div>
+
+       <div className="form-group">
+         <label>Languages Spoken:</label>
+         <Field
+           name="languages"
+           type="text"
+           component="input"
+           className="form-control form-control-lg"
+           placeholder="Languages"
+           required
+         />
+       </div>
+
+       <div className="form-group">
+         <label for="course">Konexio Course:</label>
+         <br/>
+         <Field name="course" component = "select" class="form-control-lg">
+           <option selected>Choose...</option>
+           <option value = "course1">Course 1</option>
+           <option value = "course2">Course 2</option>
+           <option value = "course3">Course 3</option>
+         </Field>
+       </div>
+
+       <div className = "form-group">
+         <Field name="skills" id="computerLiteracy" component="input" type="checkbox"/>
+         <label>Learning to Use a Computer</label>
+         <br/>
+
+         <Field name="skills" id="coding" component="input" type="checkbox"/>
+         <label>Coding</label>
+         <br/>
+
+         <Field name="skills" id="education" component="input" type="checkbox"/>
+         <label>Education</label>
+         <br/>
+
+         <Field name="skills" id="leadership" component="input" type="checkbox"/>
+         <label>Leadership & Communication</label>
+         <br/>
+
+         <Field name="skills" id="personalDevelopment" component="input" type="checkbox"/>
+         <label>Personal Development</label>
+         <br/>
+
+         <Field name="skills" id="other" component="input" type="checkbox"/>
+         <label>Other</label>
+         <br/>
+       </div>
+
+       <div class="btn-group btn-group-toggle" data-toggle="buttons" className = "form-group">
+         <label class="btn btn-secondary active">
+           <Field value = "1" type="radio" name="skillNumber" id="option1" autocomplete="off" component = "input" checked/> 1
+         </label>
+         <label class="btn btn-secondary">
+           <Field value = "2" type="radio" name="skillNumber" id="option2" autocomplete="off" component = "input"/> 2
+         </label>
+         <label class="btn btn-secondary">
+           <Field value = "3" type="radio" name="skillNumber" id="option3" autocomplete="off" component = "input"/> 3
+         </label>
+         <label class="btn btn-secondary">
+           <Field value = "4" type="radio" name="skillNumber" id="option4" autocomplete="off" component = "input"/> 4
+         </label>
+         <label class="btn btn-secondary">
+           <Field value = "5" type="radio" name="skillNumber" id="option5" autocomplete="off" component = "input"/> 5
+         </label>
+         <label class="btn btn-secondary">
+           <Field value = "6" type="radio" name="skillNumber" id="option6" autocomplete="off" component = "input"/> 6
+         </label>
+         <label class="btn btn-secondary">
+           <Field value = "7" type="radio" name="skillNumber" id="option7" autocomplete="off" component = "input"/> 7
+         </label>
+         <label class="btn btn-secondary">
+           <Field value = "8" type="radio" name="skillNumber" id="option8" autocomplete="off" component = "input"/> 8
+         </label>
+         <label class="btn btn-secondary">
+           <Field value = "9" type="radio" name="skillNumber" id="option9" autocomplete="off" component = "input"/> 9
+         </label>
+         <label class="btn btn-secondary">
+           <Field value = "10" type="radio" name="skillNumber" id="option10" autocomplete="off" component = "input"/> 10
+         </label>
+       </div>
+
+       <div className="form-group">
+         <label for="country">Country of Origin:</label>
+         <br/>
+         <Field name="country" component = "select" class="form-control-lg">
+           <option value = "france">France</option>
+           <option value = "other">Other</option>
+         </Field>
+       </div>
+
+       <div class="form-group">
+       <label for="country">Asylum Status:</label>
+         <div>
+           <Field
+             name="asylumStatus"
+             component="input"
+             type="radio"
+             value="asylumSeeker"/>
+             <label> Asylum Seeker</label>
+             <br/>
+
+           <Field
+             name="asylumStatus"
+             component="input"
+             type="radio"
+             value="refugee"/>
+             <label> Refugee</label>
+         </div>
        </div>
 
       {dirty && <div className="form-group">
@@ -177,6 +287,8 @@ function mapStateToProps({auth, user}) {
         skill3: user.profile.skills.education,
         skill4: user.profile.skills.leadership,
         skill5: user.profile.skills.personalDevelopment,
+        skill6: user.profile.skills.other,
+        skillNumber: user.profile.skillNumber,
         countryOfOrigin: user.profile.countryOfOrigin,
         asylumStatus: user.profile.asylumStatus
       },

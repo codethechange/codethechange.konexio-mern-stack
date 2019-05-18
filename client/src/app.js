@@ -26,6 +26,8 @@ import "../style/welcomeButton.scss";
 import "../style/welcomeText.scss";
 import "../style/myConnections.scss";
 import "../style/signup.scss";
+import "../style/bootstrapComponents.scss";
+import "../style/signout.scss";
 
 
 const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
