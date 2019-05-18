@@ -4,6 +4,8 @@ import config from '../config';
 export default {
     generateToken: function (user) {
         const timeStamp = new Date().getTime();
+        console.log(user)
+        console.log('user id: ' + user.id)
         const payload = {
             sub: user.id,
             iat: timeStamp

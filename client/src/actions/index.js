@@ -1,12 +1,12 @@
 import axios from 'axios';
-import { 
+import {
     AUTH_USER,
     UNAUTH_USER,
     AUTH_ERROR,
     TRY_CONNECT,
     GET_USER_PROFILE,
     UPDATE_USER_PROFILE_GOOD,
-    UPDATE_USER_PROFILE_FAIL 
+    UPDATE_USER_PROFILE_FAIL
 } from './types';
 const ROOT_URL = process.env.API_URI || 'http://localhost:8000';
 
@@ -24,8 +24,10 @@ export function signUserIn(data) {
             .then(res => {
                 dispatch({type: AUTH_USER})
                 localStorage.setItem('auth_jwt_token', res.data.token);
-                window.location = '/#account';
-                axios.defaults.headers.common['Authorization'] = localStorage.getItem('auth_jwt_token');
+                axios.defaults.headers.common['Authorization'] = res.data.token;
+                setTimeout(function(){
+                  window.location = '/#account'
+                }, 3000);
             })
             .catch(error => {
                 console.log(error);
@@ -56,6 +58,7 @@ export function signUserOut() {
     return function (dispatch) {
         dispatch({type: UNAUTH_USER})
         localStorage.removeItem('auth_jwt_token');
+        axios.defaults.headers.common['Authorization'] = '';
     }
 }
 
