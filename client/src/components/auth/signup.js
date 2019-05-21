@@ -142,10 +142,8 @@ class SignupMentee extends Component {
                 </Field>
               </div>
 
-              <div>
-                <label>What skills would you like to develop?</label>
-              </div>
               <div className = "form-group">
+              <label for="skills">What skills would you like to develop?</label><br/>
                 <Field name="skills" id="computerLiteracy" component="input" type="checkbox"/>
                 <label>Learning to Use a Computer</label>
                 <br/>
@@ -210,16 +208,17 @@ class SignupMentee extends Component {
               </div>
 
               <div className="form-group">
-                <label for="country">Country of Origin:</label>
+                <label for="countryOfOrigin">Country of Origin:</label>
                 <br/>
-                <Field name="country" component = "select" class="form-control-lg">
+                <Field name="countryOfOrigin" component = "select" class="form-control-lg">
+                  <option selected>Choose...</option>
                   <option value = "france">France</option>
                   <option value = "other">Other</option>
                 </Field>
               </div>
 
               <div class="form-group">
-              <label for="country">Asylum Status:</label>
+              <label for="asylumStatus">Asylum Status:</label>
                 <div>
                   <Field
                     name="asylumStatus"
