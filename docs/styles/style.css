@@ -1,3 +1,153 @@
+.mentor-button {
+  width: 431px;
+  height: 80px;
+  background-color: #48aee2; }
+
+.mentor-button-text {
+  width: 261.5px;
+  height: 78px;
+  font-family: Open Sans, Arial, sans-serif;
+  font-size: 26px;
+  font-weight: lighter;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff; }
+
+.mentee-button {
+  width: 431px;
+  height: 80px;
+  background-color: #2075bc; }
+
+.mentee-button-text {
+  width: 300px;
+  height: 80px;
+  font-family: Open Sans, Arial, sans-serif;
+  font-size: 26px;
+  font-weight: lighter;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff; }
+
+.mentor-container {
+  display: inline-block;
+  position: relative;
+  margin-right: 41px;
+  margin-top: 30px; }
+
+.mentee-container {
+  display: inline-block;
+  position: relative;
+  margin-left: 41px;
+  margin-top: 30px; }
+
+.button-container {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center; }
+#container {
+  display: flex;
+  /* establish flex container */
+  flex-direction: column;
+  /* stack flex items vertically */
+  align-items: center;
+  /* center items horizontally, in this case */
+  padding-top: 10px; }
+
+.welcome-container {
+  margin: 0 auto;
+  margin-bottom: 10px; }
+
+.welcome-text-main {
+  font-family: Comfortaa;
+  font-size: 64px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 2.3px;
+  color: #2075bc;
+  margin-bottom: 0.5em;
+  text-align: center; }
+
+.welcome-text-submain {
+  font-family: Comfortaa;
+  font-size: 32px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1.1px;
+  color: #3fabe1;
+  text-align: center; }
+.resize {
+  height: 40vh;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px; }
+.top-buffer {
+  margin-top: 50px; }
+
+.jumbotron {
+  height: 30%; }
+
+.jumbo-header {
+  margin-top: -5%;
+  font-size: 80px; }
+
+.lg-text {
+  font-size: 40px; }
+
+.lg-text-blue {
+  font-size: 40px;
+  color: #2075BC; }
+
+.btn-blue {
+  color: #ffffff;
+  background-color: #3FABE1;
+  height: 70px;
+  width: 300px;
+  font-size: 30px; }
+
+.info-text {
+  font-size: 30px; }
+.top-buffer {
+  margin-top: 50px; }
+
+.card-header {
+  background-color: #2075BC;
+  font-size: 70px;
+  color: #ffffff; }
+
+.card {
+  font-size: 25px; }
+
+.jumbotron {
+  color: #ffffff;
+  background-color: #2075BC; }
+
+.jumbo-header {
+  margin-top: -5%;
+  font-size: 80px; }
+.jumbotron-signout {
+  height: 70%; }
+
+.btn-blue {
+  color: #ffffff;
+  background-color: #3FABE1;
+  height: 70px;
+  width: 300px;
+  font-size: 30px; }
+
+.signOutBtn {
+  margin-top: 30px; }
 body {
   background-color: white; }
   body .cointainer {
