@@ -8,6 +8,6 @@ router.use('/api', Middlewares.loginRequired, api)
 router.post('/signup', Authentication.signup)
 router.post('/signin', Authentication.signin)
 router.get('/ping', (req, res) => res.send('pong'))
-router.get('/', (req, res) => res.json({'source': 'https://github.com/codethechange/konexio-mern-stack'}))
+router.get('/', (req, res) => res.json({'source': 'https://github.com/codethechange/codethechange.konexio-mern-stack'}))
 
 export default router;
