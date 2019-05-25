@@ -4,7 +4,6 @@ import { connect } from "react-redux";
 import { signUserUp } from "../../actions";
 import CenterCard363 from "../centerCard363";
 import "../../../style/signup.scss";
-import "../../../style/bootstrapComponents.scss";
 
 class SignupMentee extends Component {
   renderAlert(error) {
@@ -27,7 +26,7 @@ class SignupMentee extends Component {
   render() {
     const { handleSubmit } = this.props;
     return (
-      <CenterCard363>
+      //<CenterCard363>
         <div className="card">
           <h4 className="card-header">Sign Up</h4>
           <div className="card-body">
@@ -282,7 +281,7 @@ class SignupMentee extends Component {
             </form>
           </div>
         </div>
-      </CenterCard363>
+      //</CenterCard363>
     );
   }
 }
