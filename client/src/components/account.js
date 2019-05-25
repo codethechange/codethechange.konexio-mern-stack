@@ -16,7 +16,7 @@ class Account extends Component {
     this.props.getUserProfile();
   }
   render() {
-    let {status, profile} = this.props;
+    //let {status, profile} = this.props;
     return (
       <CenterCard363>
         <div className='card border-secondary'>
@@ -25,7 +25,7 @@ class Account extends Component {
         </h4>
         <div className='card-body'>
         <p className="text-muted">Server status: {status} ☀</p>
-          {profile && this.renderProfileForm()}
+          {this.renderProfileForm()}
         </div>
         </div>
       </CenterCard363>
@@ -54,7 +54,7 @@ class Account extends Component {
   }
   renderProfileForm(){
     const {editting} = this.state;
-    const {handleSubmit, dirty, updateProfileFailMsg} = this.props;
+    const {handleSubmit, dirty, updateProfileFailMsg, status, profile } = this.props;
     return (
       <form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
         <div className="form-group">
@@ -271,7 +271,7 @@ class Account extends Component {
   }
 }
 
-function mapStateToProps({auth, user}) {
+function mapStateToProps({user,auth}) {
   return user.profile?{
       status: auth.status,
       profile: user.profile,
@@ -304,4 +304,5 @@ function mapStateToProps({auth, user}) {
 
 export default connect(mapStateToProps, {tryConnect, getUserProfile, updateUserProfile})(reduxForm({
   form: 'profileUpdate',
+  enableReinitialize : true
 })(Account));
