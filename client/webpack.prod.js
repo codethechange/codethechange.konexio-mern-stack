@@ -8,7 +8,7 @@ module.exports = merge(common, {
         new webpack.DefinePlugin({
             'process.env': {
                 'NODE_ENV': JSON.stringify('production'),
-                'API_URI': JSON.stringify('https://konexio-mentoring-platform.herokuapp.com')
+                'API_URI': JSON.stringify('https://konexioserver.herokuapp.com')
             },
         }),
     ]
