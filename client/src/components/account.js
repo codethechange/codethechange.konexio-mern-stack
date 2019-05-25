@@ -162,61 +162,63 @@ class Account extends Component {
 
        <div className = "form-group">
        <label for="skills">What skills would you like to develop?</label><br/>
-         <Field name="skills" id="computerLiteracy" component="input" type="checkbox"/>
+         <Field name="skill1" id="computerLiteracy" component="input" type="checkbox"/>
          <label>Learning to Use a Computer</label>
          <br/>
 
-         <Field name="skills" id="coding" component="input" type="checkbox"/>
+         <Field name="skill2" id="coding" component="input" type="checkbox"/>
          <label>Coding</label>
          <br/>
 
-         <Field name="skills" id="education" component="input" type="checkbox"/>
+         <Field name="skill3" id="education" component="input" type="checkbox"/>
          <label>Education</label>
          <br/>
 
-         <Field name="skills" id="leadership" component="input" type="checkbox"/>
+         <Field name="skill4" id="leadership" component="input" type="checkbox"/>
          <label>Leadership & Communication</label>
          <br/>
 
-         <Field name="skills" id="personalDevelopment" component="input" type="checkbox"/>
+         <Field name="skill5" id="personalDevelopment" component="input" type="checkbox"/>
          <label>Personal Development</label>
          <br/>
+       </div>
 
-         <Field name="skills" id="other" component="input" type="checkbox"/>
-         <label>Other</label>
-         <br/>
+       <div>
+         <label class="control-label col-md-8">
+           How would your rate your ability to use a computer?
+           </label>
        </div>
 
        <div class="btn-group btn-group-toggle" data-toggle="buttons" className = "form-group">
          <label class="btn btn-secondary active">
-           <Field value = "1" type="radio" name="skillNumber" id="option1" autocomplete="off" component = "input" checked/> 1
+           <Field value = "1" type="radio" name="computerSkill" id="1" autocomplete="off" component = "input" checked/> 1
          </label>
          <label class="btn btn-secondary">
-           <Field value = "2" type="radio" name="skillNumber" id="option2" autocomplete="off" component = "input"/> 2
+           <Field value = "2" type="radio" name="computerSkill" id="2" autocomplete="off" component = "input"/> 2
          </label>
          <label class="btn btn-secondary">
-           <Field value = "3" type="radio" name="skillNumber" id="option3" autocomplete="off" component = "input"/> 3
+           <Field value = "3" type="radio" name="computerSkill" id="3" autocomplete="off" component = "input"/> 3
          </label>
          <label class="btn btn-secondary">
-           <Field value = "4" type="radio" name="skillNumber" id="option4" autocomplete="off" component = "input"/> 4
+           <Field value = "4" type="radio" name="computerSkill" id="4" autocomplete="off" component = "input"/> 4
          </label>
          <label class="btn btn-secondary">
-           <Field value = "5" type="radio" name="skillNumber" id="option5" autocomplete="off" component = "input"/> 5
+           <Field value = "5" type="radio" name="computerSkill" id="5" autocomplete="off" component = "input"/> 5
          </label>
          <label class="btn btn-secondary">
-           <Field value = "6" type="radio" name="skillNumber" id="option6" autocomplete="off" component = "input"/> 6
+           <Field value = "6" type="radio" name="computerSkill" id="6" autocomplete="off" component = "input"/> 6
          </label>
          <label class="btn btn-secondary">
-           <Field value = "7" type="radio" name="skillNumber" id="option7" autocomplete="off" component = "input"/> 7
+           <Field value = "7" type="radio" name="computerSkill" id="7" autocomplete="off" component = "input"/> 7
          </label>
          <label class="btn btn-secondary">
-           <Field value = "8" type="radio" name="skillNumber" id="option8" autocomplete="off" component = "input"/> 8
+           <Field value = "8" type="radio" name="computerSkill" id="8" autocomplete="off" component = "input"/> 8
          </label>
          <label class="btn btn-secondary">
-           <Field value = "9" type="radio" name="skillNumber" id="option9" autocomplete="off" component = "input"/> 9
+           <Field value = "9" type="radio" name="computerSkill" id="9" autocomplete="off" component = "input"/> 9
          </label>
          <label class="btn btn-secondary">
-           <Field value = "10" type="radio" name="skillNumber" id="option10" autocomplete="off" component = "input"/> 10
+           <Field value = "10" type="radio" name="computerSkill" id="10" autocomplete="off" component = "input"/> 10
          </label>
        </div>
 
@@ -280,6 +282,7 @@ function mapStateToProps({user,auth}) {
         firstName: user.profile.name.first,
         lastName: user.profile.name.last,
         phoneNumber: user.profile.phone.number,
+        isMentee: user.profile.isMentee,
         age: user.profile.age,
         gender: user.profile.gender,
         languages: user.profile.languages,
@@ -289,8 +292,8 @@ function mapStateToProps({user,auth}) {
         skill3: user.profile.skills.education,
         skill4: user.profile.skills.leadership,
         skill5: user.profile.skills.personalDevelopment,
-        skill6: user.profile.skills.other,
         skillNumber: user.profile.skillNumber,
+        computerSkill: user.profile.computerSkill,
         countryOfOrigin: user.profile.countryOfOrigin,
         asylumStatus: user.profile.asylumStatus
       },
