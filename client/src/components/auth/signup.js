@@ -145,61 +145,71 @@ class SignupMentee extends Component {
               <div className = "form-group">
               <label for="skills">What skills would you like to develop?</label><br/>
                 <Field name="skill1" id="computerLiteracy" component="input" type="checkbox"/>
-                <label>Learning to Use a Computer</label>
+                <label>I want to learn how to use a computer</label>
                 <br/>
 
                 <Field name="skill2" id="coding" component="input" type="checkbox"/>
-                <label>Coding</label>
+                <label>I want to learn how to code</label>
                 <br/>
 
                 <Field name="skill3" id="education" component="input" type="checkbox"/>
-                <label>Education</label>
+                <label>I want to improve my level of education</label>
                 <br/>
 
                 <Field name="skill4" id="leadership" component="input" type="checkbox"/>
-                <label>Leadership & Communication</label>
+                <label>I want to know how to communicate and be a leader</label>
                 <br/>
 
                 <Field name="skill5" id="personalDevelopment" component="input" type="checkbox"/>
-                <label>Personal Development</label>
+                <label>I want to improve myself</label>
                 <br/>
               </div>
 
               <div>
                 <label class="control-label col-md-8">
                   How would your rate your ability to use a computer?
-                  </label>
+                </label>
               </div>
-              <div class="btn-group btn-group-toggle" data-toggle="buttons" className = "form-group">
+              <div class="btn-group btn-group-toggle" data-toggle="buttons" className="form-group">
                 <label class="btn btn-secondary active">
-                  <Field value = "1" type="radio" name="computerSkill" id="1" autocomplete="off" component = "input" checked/> 1
+                  <Field value="1" type="radio" name="computerSkill" id="1" autocomplete="off" component = "input"
+                  parse={Number}/> 1
                 </label>
                 <label class="btn btn-secondary">
-                  <Field value = "2" type="radio" name="computerSkill" id="2" autocomplete="off" component = "input"/> 2
+                  <Field value="2" type="radio" name="computerSkill" id="2" autocomplete="off" component = "input"
+                  parse={Number}/> 2
                 </label>
                 <label class="btn btn-secondary">
-                  <Field value = "3" type="radio" name="computerSkill" id="3" autocomplete="off" component = "input"/> 3
+                  <Field value="3" type="radio" name="computerSkill" id="3" autocomplete="off" component = "input"
+                  parse={Number}/> 3
                 </label>
                 <label class="btn btn-secondary">
-                  <Field value = "4" type="radio" name="computerSkill" id="4" autocomplete="off" component = "input"/> 4
+                  <Field value="4" type="radio" name="computerSkill" id="4" autocomplete="off" component = "input"
+                  parse={Number}/> 4
                 </label>
                 <label class="btn btn-secondary">
-                  <Field value = "5" type="radio" name="computerSkill" id="5" autocomplete="off" component = "input"/> 5
+                  <Field value="5" type="radio" name="computerSkill" id="5" autocomplete="off" component = "input"
+                  parse={Number}/> 5
                 </label>
                 <label class="btn btn-secondary">
-                  <Field value = "6" type="radio" name="computerSkill" id="6" autocomplete="off" component = "input"/> 6
+                  <Field value="6" type="radio" name="computerSkill" id="6" autocomplete="off" component = "input"
+                  parse={Number}/> 6
                 </label>
                 <label class="btn btn-secondary">
-                  <Field value = "7" type="radio" name="computerSkill" id="7" autocomplete="off" component = "input"/> 7
+                  <Field value="7" type="radio" name="computerSkill" id="7" autocomplete="off" component = "input"
+                  parse={Number}/> 7
                 </label>
                 <label class="btn btn-secondary">
-                  <Field value = "8" type="radio" name="computerSkill" id="8" autocomplete="off" component = "input"/> 8
+                  <Field value="8" type="radio" name="computerSkill" id="8" autocomplete="off" component = "input"
+                  parse={Number}/> 8
                 </label>
                 <label class="btn btn-secondary">
-                  <Field value = "9" type="radio" name="computerSkill" id="9" autocomplete="off" component = "input"/> 9
+                  <Field value="9" type="radio" name="computerSkill" id="9" autocomplete="off" component = "input"
+                  parse={Number}/> 9
                 </label>
                 <label class="btn btn-secondary">
-                  <Field value = "10" type="radio" name="computerSkill" id="10" autocomplete="off" component = "input"/> 10
+                  <Field value="10" type="radio" name="computerSkill" id="10" autocomplete="off" component = "input"
+                  parse={Number}/> 10
                 </label>
               </div>
 
