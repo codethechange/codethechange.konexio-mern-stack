@@ -107,14 +107,13 @@ class SignupMentee extends Component {
                 <div class="col">
                   <div className="form-group">
                     <label for="gender">Gender:</label>
-                    <select
-                      className="form-control form-control-lg" id="gender"
-                      name="gender">
+                    <br/>
+                    <Field name="gender" component = "select" class="form-control-lg">
                       <option selected>Choose...</option>
-                      <option>Male</option>
-                      <option>Female</option>
-                      <option>Other</option>
-                    </select>
+                      <option value = "male">Male</option>
+                      <option value = "female">Female</option>
+                      <option value = "other">Other</option>
+                    </Field>
                   </div>
                 </div>
               </div>
@@ -133,115 +132,113 @@ class SignupMentee extends Component {
 
               <div className="form-group">
                 <label for="course">Konexio Course:</label>
-                <select class="form-control form-control-lg" id="course">
+                <br/>
+                <Field name="course" component = "select" class="form-control-lg">
                   <option selected>Choose...</option>
-                  <option>Course 1</option>
-                  <option>Course 2</option>
-                  <option>Course 3</option>
-                </select>
+                  <option value = "course1">Course 1</option>
+                  <option value = "course2">Course 2</option>
+                  <option value = "course3">Course 3</option>
+                </Field>
               </div>
-              <div>
-                <label>What skills would you like to develop?</label>
-              </div>
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" value="" /> Learning to Use a Computer
-                </label>
-              </div>
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" value="" /> Coding
-                </label>
-              </div>
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" value="" /> Education
-                </label>
-              </div>
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" value="" /> Leadership & Communication
-                </label>
-              </div>
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" value="" /> Personal Development
-                </label>
-              </div>
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" value="" /> Other
-                </label>
+
+              <div className = "form-group">
+              <label for="skills">What skills would you like to develop?</label><br/>
+                <Field name="skill1" id="computerLiteracy" component="input" type="checkbox"/>
+                <label>I want to learn how to use a computer</label>
+                <br/>
+
+                <Field name="skill2" id="coding" component="input" type="checkbox"/>
+                <label>I want to learn how to code</label>
+                <br/>
+
+                <Field name="skill3" id="education" component="input" type="checkbox"/>
+                <label>I want to improve my level of education</label>
+                <br/>
+
+                <Field name="skill4" id="leadership" component="input" type="checkbox"/>
+                <label>I want to know how to communicate and be a leader</label>
+                <br/>
+
+                <Field name="skill5" id="personalDevelopment" component="input" type="checkbox"/>
+                <label>I want to improve myself</label>
+                <br/>
               </div>
 
               <div>
                 <label class="control-label col-md-8">
                   How would your rate your ability to use a computer?
-                  </label>
+                </label>
               </div>
-              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+              <div class="btn-group btn-group-toggle" data-toggle="buttons" className="form-group">
                 <label class="btn btn-secondary active">
-                  <input type="radio" name="options" id="option1" autocomplete="off" checked/> 1
+                  <Field value="1" type="radio" name="computerSkill" id="1" autocomplete="off" component = "input"
+                  parse={Number}/> 1
                 </label>
                 <label class="btn btn-secondary">
-                  <input type="radio" name="options" id="option2" autocomplete="off"/> 2
+                  <Field value="2" type="radio" name="computerSkill" id="2" autocomplete="off" component = "input"
+                  parse={Number}/> 2
                 </label>
                 <label class="btn btn-secondary">
-                  <input type="radio" name="options" id="option3" autocomplete="off"/> 3
+                  <Field value="3" type="radio" name="computerSkill" id="3" autocomplete="off" component = "input"
+                  parse={Number}/> 3
                 </label>
                 <label class="btn btn-secondary">
-                  <input type="radio" name="options" id="option3" autocomplete="off"/> 4
+                  <Field value="4" type="radio" name="computerSkill" id="4" autocomplete="off" component = "input"
+                  parse={Number}/> 4
                 </label>
                 <label class="btn btn-secondary">
-                  <input type="radio" name="options" id="option3" autocomplete="off"/> 5
+                  <Field value="5" type="radio" name="computerSkill" id="5" autocomplete="off" component = "input"
+                  parse={Number}/> 5
                 </label>
                 <label class="btn btn-secondary">
-                  <input type="radio" name="options" id="option3" autocomplete="off"/> 6
+                  <Field value="6" type="radio" name="computerSkill" id="6" autocomplete="off" component = "input"
+                  parse={Number}/> 6
                 </label>
                 <label class="btn btn-secondary">
-                  <input type="radio" name="options" id="option3" autocomplete="off"/> 7
+                  <Field value="7" type="radio" name="computerSkill" id="7" autocomplete="off" component = "input"
+                  parse={Number}/> 7
                 </label>
                 <label class="btn btn-secondary">
-                  <input type="radio" name="options" id="option3" autocomplete="off"/> 8
+                  <Field value="8" type="radio" name="computerSkill" id="8" autocomplete="off" component = "input"
+                  parse={Number}/> 8
                 </label>
                 <label class="btn btn-secondary">
-                  <input type="radio" name="options" id="option3" autocomplete="off"/> 9
+                  <Field value="9" type="radio" name="computerSkill" id="9" autocomplete="off" component = "input"
+                  parse={Number}/> 9
                 </label>
                 <label class="btn btn-secondary">
-                  <input type="radio" name="options" id="option3" autocomplete="off"/> 10
+                  <Field value="10" type="radio" name="computerSkill" id="10" autocomplete="off" component = "input"
+                  parse={Number}/> 10
                 </label>
               </div>
 
               <div className="form-group">
-                <label for="country">Country of Origin:</label>
-                <select class="form-control form-control-lg" id="country">
-                  <option>France</option>
-                  <option>Other</option>
-                </select>
+                <label for="countryOfOrigin">Country of Origin:</label>
+                <br/>
+                <Field name="countryOfOrigin" component = "select" class="form-control-lg">
+                  <option selected>Choose...</option>
+                  <option value = "france">France</option>
+                  <option value = "other">Other</option>
+                </Field>
               </div>
 
               <div class="form-group">
-                <label class="control-label col-md-5">Asylum Status:</label>
-                <div class="col-md-4">
-                  <label class="radio-inline control-label">
-                    <input
-                      checked="checked"
-                      id="asylumStatusSeeker"
-                      name="asylumStatus"
-                      type="radio"
-                      value="seeker"
-                    />{" "}
-                    Asylum Seeker
-                  </label>
-                  <label class="radio-inline control-label">
-                    <input
-                      id="asylumStatusRefugee"
-                      name="asylumStatus"
-                      type="radio"
-                      value="refugee"
-                    />{" "}
-                    Refugee
-                  </label>
+              <label for="asylumStatus">Asylum Status:</label>
+                <div>
+                  <Field
+                    name="asylumStatus"
+                    component="input"
+                    type="radio"
+                    value="asylumSeeker"/>
+                    <label> Asylum Seeker</label>
+                    <br/>
+
+                  <Field
+                    name="asylumStatus"
+                    component="input"
+                    type="radio"
+                    value="refugee"/>
+                    <label> Refugee</label>
                 </div>
               </div>
 
