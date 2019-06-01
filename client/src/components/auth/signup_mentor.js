@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { reduxForm, Field } from "redux-form";
+import { reduxForm, change, Field } from "redux-form";
 import { connect } from "react-redux";
 import { signUserUp } from "../../actions";
 import CenterCard363 from "../centerCard363";
@@ -24,6 +24,7 @@ class SignupMentor extends Component {
   }
   render() {
     const { handleSubmit } = this.props;
+    this.props.change('isMentee', false);
     return (
       <CenterCard363>
         <div className="card">
@@ -106,29 +107,32 @@ class SignupMentor extends Component {
                 <div class="col">
                   <div className="form-group">
                     <label for="gender">Gender:</label>
-                    <select
-                      className="form-control form-control-lg" id="gender"
-                      name="gender">
+                    <br/>
+                    <Field name="gender" component = "select" class="form-control-lg">
                       <option selected>Choose...</option>
-                      <option>Male</option>
-                      <option>Female</option>
-                      <option>Other</option>
-                    </select>
+                      <option value = "male">Male</option>
+                      <option value = "female">Female</option>
+                      <option value = "other">Other</option>
+                    </Field>
                   </div>
                 </div>
               </div>
 
-              <div className="form-group">
-                <label>Languages Spoken:</label>
-                <Field
-                  name="languages"
-                  type="text"
-                  component="input"
-                  className="form-control form-control-lg"
-                  placeholder="Languages"
-                  required
-                />
+              <div className = "form-group">
+              <label for="languages">Languages:</label><br/>
+                <Field name="english" id="english" component="input" type="checkbox"/>
+                <label>English</label>
+                <br/>
+
+                <Field name="french" id="french" component="input" type="checkbox"/>
+                <label>French</label>
+                <br/>
+
+                <Field name="other" id="other" component="input" type="checkbox"/>
+                <label>Other</label>
+                <br/>
               </div>
+
               <div className="form-group">
                 <label>Name of Organization:</label>
                 <Field
@@ -213,11 +217,13 @@ class SignupMentor extends Component {
               </div>
 
               <div className="form-group">
-                <label for="country">Country of Origin:</label>
-                <select class="form-control form-control-lg" id="country">
-                  <option>France</option>
-                  <option>Other</option>
-                </select>
+                <label for="countryOfOrigin">Country of Origin:</label>
+                <br/>
+                <Field name="countryOfOrigin" component = "select" class="form-control-lg">
+                  <option selected>Choose...</option>
+                  <option value = "france">France</option>
+                  <option value = "other">Other</option>
+                </Field>
               </div>
 
               <div className="form-group">

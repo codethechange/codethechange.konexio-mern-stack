@@ -31,10 +31,16 @@ const userSchema = new mongoose.Schema({
     //languages: String,
     languages: {
         english: {
-            type: Boolean
+            type: Boolean,
+            default: false
         },
         french: {
-            type: Boolean
+            type: Boolean,
+            default: false
+        },
+        other: {
+            type: Boolean,
+            default: false
         }
     },
     course: String,
