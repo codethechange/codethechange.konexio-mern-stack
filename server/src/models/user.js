@@ -67,7 +67,6 @@ const userSchema = new mongoose.Schema({
     },
     computerSkill: Number,
     countryOfOrigin: String,
-    asylumStatus: String,
     usersMatched: [Object],
     password: String
 })

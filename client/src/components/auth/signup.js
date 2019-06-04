@@ -226,26 +226,6 @@ class SignupMentee extends Component {
                 </Field>
               </div>
 
-              <div class="form-group">
-              <label for="asylumStatus">Asylum Status:</label>
-                <div>
-                  <Field
-                    name="asylumStatus"
-                    component="input"
-                    type="radio"
-                    value="asylumSeeker"/>
-                    <label> Asylum Seeker</label>
-                    <br/>
-
-                  <Field
-                    name="asylumStatus"
-                    component="input"
-                    type="radio"
-                    value="refugee"/>
-                    <label> Refugee</label>
-                </div>
-              </div>
-
               <div className="form-group">
                 <label>Password:</label>
                 <Field

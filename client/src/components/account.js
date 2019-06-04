@@ -240,26 +240,6 @@ class Account extends Component {
            </Field>
          </div>
 
-         <div class="form-group">
-         <label for="asylumStatus">Asylum Status:</label>
-           <div>
-             <Field
-               name="asylumStatus"
-               component="input"
-               type="radio"
-               value="asylumSeeker"/>
-               <label> Asylum Seeker</label>
-               <br/>
-
-             <Field
-               name="asylumStatus"
-               component="input"
-               type="radio"
-               value="refugee"/>
-               <label> Refugee</label>
-           </div>
-         </div>
-
         {dirty && <div className="form-group">
           <label>Password:</label>
           <Field
@@ -305,7 +285,6 @@ function mapStateToProps({user,auth}) {
         skill5: user.profile.skills.personalDevelopment,
         computerSkill: user.profile.computerSkill,
         countryOfOrigin: user.profile.countryOfOrigin,
-        asylumStatus: user.profile.asylumStatus,
         usersMatched: user.profile.usersMatched
       },
       updateProfileFailMsg: user.updateProfileFailMsg

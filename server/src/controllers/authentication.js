@@ -5,7 +5,7 @@ export default {
     signup : (req, res, next) => {
         const { email, password, firstName, lastName, phoneNumber, isMentee, age, gender, english, french,
           other, course, skill1, skill2, skill3, skill4, skill5, computerSkill, countryOfOrigin,
-          asylumStatus, usersMatched } = req.body;
+          usersMatched } = req.body;
 
         if (!email || !password) {
             return res
@@ -50,7 +50,6 @@ export default {
                     },
                     computerSkill: computerSkill,
                     countryOfOrigin: countryOfOrigin,
-                    asylumStatus: asylumStatus,
                     usersMatched: usersMatched
                 })
 
@@ -123,7 +122,6 @@ export default {
                 },
                 computerSkill: req.body.computerSkill,
                 countryOfOrigin: req.body.countryOfOrigin,
-                asylumStatus: req.body.asylumStatus,
                 usersMatched: req.body.usersMatched
             };
             delete newProfile.email;
