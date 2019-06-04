@@ -28,7 +28,6 @@ const userSchema = new mongoose.Schema({
     isMentee: Boolean,
     age: Number,
     gender: String,
-    //languages: String,
     languages: {
         english: {
             type: Boolean,
@@ -69,6 +68,7 @@ const userSchema = new mongoose.Schema({
     computerSkill: Number,
     countryOfOrigin: String,
     asylumStatus: String,
+    usersMatched: [ObjectId],
     password: String
 })
 
