@@ -12817,7 +12817,7 @@ class Account extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
     this.props.getUserProfile();
   }
   render() {
-    let { status, profile } = this.props;
+    //let {status, profile} = this.props;
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       __WEBPACK_IMPORTED_MODULE_4__centerCard363__["a" /* default */],
       null,
@@ -12839,7 +12839,7 @@ class Account extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
             status,
             ' \u2600'
           ),
-          profile && this.renderProfileForm()
+          this.renderProfileForm()
         )
       )
     );
@@ -12881,171 +12881,404 @@ class Account extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
   }
   renderProfileForm() {
     const { editting } = this.state;
-    const { handleSubmit, dirty, updateProfileFailMsg } = this.props;
-    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      'form',
-      { onSubmit: handleSubmit(this.handleFormSubmit.bind(this)) },
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'div',
-        { className: 'form-group' },
+    const { handleSubmit, dirty, updateProfileFailMsg, status, profile } = this.props;
+    if (profile != null) {
+      console.log(profile);
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'form',
+        { onSubmit: handleSubmit(this.handleFormSubmit.bind(this)) },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'label',
-          null,
-          'First Name:'
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */], {
-          disabled: !editting,
-          type: 'text',
-          name: 'firstName',
-          component: 'input',
-          className: 'form-control form-control-lg',
-          placeholder: 'First Name',
-          required: true
-        })
-      ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'div',
-        { className: 'form-group' },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'label',
-          null,
-          'Last Name:'
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */], {
-          disabled: !editting,
-          type: 'text',
-          name: 'lastName',
-          component: 'input',
-          className: 'form-control form-control-lg',
-          placeholder: 'Last Name',
-          required: true
-        })
-      ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'div',
-        { className: 'form-group' },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'label',
-          null,
-          'Email:'
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */], {
-          disabled: true,
-          readOnly: true,
-          type: 'email',
-          name: 'email',
-          component: 'input',
-          className: 'form-control form-control-lg',
-          placeholder: 'sample@email.com',
-          required: true
-        })
-      ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'div',
-        { className: 'form-group' },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'label',
-          null,
-          'Phone Number:'
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */], {
-          disabled: true,
-          readOnly: true,
-          name: 'phoneNumber',
-          type: 'tel',
-          component: 'input',
-          className: 'form-control form-control-lg',
-          pattern: '[0-9]{3}-[0-9]{3}-[0-9]{4}',
-          placeholder: 'XXX-XXX-XXXX',
-          required: true
-        })
-      ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'div',
-        { className: 'form-group' },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'label',
-          null,
-          'Age:'
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */], {
-          disabled: true,
-          readOnly: true,
-          name: 'age',
-          type: 'text',
-          component: 'input',
-          className: 'form-control form-control-lg',
-          placeholder: 'Age',
-          required: true
-        })
-      ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'div',
-        { className: 'form-group' },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'label',
-          { 'for': 'gender' },
-          'Gender:'
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'select',
-          {
-            className: 'form-control form-control-lg', id: 'gender',
-            name: 'gender' },
+          'div',
+          { className: 'form-group' },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'option',
-            { selected: true },
-            'Choose...'
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'option',
+            'label',
             null,
-            'Male'
+            'First Name:'
           ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */], {
+            disabled: !editting,
+            type: 'text',
+            name: 'firstName',
+            component: 'input',
+            className: 'form-control form-control-lg',
+            placeholder: 'First Name',
+            required: true
+          })
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: 'form-group' },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'option',
+            'label',
             null,
-            'Female'
+            'Last Name:'
           ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */], {
+            disabled: !editting,
+            type: 'text',
+            name: 'lastName',
+            component: 'input',
+            className: 'form-control form-control-lg',
+            placeholder: 'Last Name',
+            required: true
+          })
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: 'form-group' },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'option',
+            'label',
+            null,
+            'Email:'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */], {
+            disabled: true,
+            readOnly: true,
+            type: 'email',
+            name: 'email',
+            component: 'input',
+            className: 'form-control form-control-lg',
+            placeholder: 'sample@email.com',
+            required: true
+          })
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: 'form-group' },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'label',
+            null,
+            'Phone Number:'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */], {
+            disabled: true,
+            readOnly: true,
+            name: 'phoneNumber',
+            type: 'tel',
+            component: 'input',
+            className: 'form-control form-control-lg',
+            pattern: '[0-9]{3}-[0-9]{3}-[0-9]{4}',
+            placeholder: 'XXX-XXX-XXXX',
+            required: true
+          })
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: 'form-group' },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'label',
+            null,
+            'Age:'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */], {
+            disabled: true,
+            readOnly: true,
+            name: 'age',
+            type: 'text',
+            component: 'input',
+            className: 'form-control form-control-lg',
+            placeholder: 'Age',
+            required: true
+          })
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: 'form-group' },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'label',
+            { 'for': 'gender' },
+            'Gender:'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */],
+            { name: 'gender', component: 'select', 'class': 'form-control-lg' },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'option',
+              { selected: true },
+              'Choose...'
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'option',
+              { value: 'male' },
+              'Male'
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'option',
+              { value: 'female' },
+              'Female'
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'option',
+              { value: 'other' },
+              'Other'
+            )
+          )
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: 'form-group' },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'label',
+            { 'for': 'languages' },
+            'Languages:'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */], { name: 'english', id: 'english', component: 'input', type: 'checkbox' }),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'label',
+            null,
+            'English'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */], { name: 'french', id: 'french', component: 'input', type: 'checkbox' }),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'label',
+            null,
+            'French'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */], { name: 'other', id: 'other', component: 'input', type: 'checkbox' }),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'label',
             null,
             'Other'
-          )
-        )
-      ),
-      dirty && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'div',
-        { className: 'form-group' },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'label',
-          null,
-          'Password:'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null)
         ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */], {
-          type: 'password',
-          name: 'password',
-          component: 'input',
-          className: updateProfileFailMsg ? "form-control form-control-lg is-invalid" : "form-control form-control-lg",
-          placeholder: 'your password',
-          required: true
-        }),
-        updateProfileFailMsg && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'div',
-          { className: 'invalid-feedback' },
-          updateProfileFailMsg
+          { className: 'form-group' },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'label',
+            null,
+            'Konexio Course/Organization:'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */], {
+            disabled: true,
+            readOnly: true,
+            name: 'course',
+            type: 'text',
+            component: 'input',
+            className: 'form-control form-control-lg',
+            placeholder: 'Course',
+            required: true
+          })
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: 'form-group' },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'label',
+            { 'for': 'skills' },
+            'What skills would you like to develop?'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */], { name: 'skill1', id: 'computerLiteracy', component: 'input', type: 'checkbox' }),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'label',
+            null,
+            'Learning to Use a Computer'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */], { name: 'skill2', id: 'coding', component: 'input', type: 'checkbox' }),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'label',
+            null,
+            'Coding'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */], { name: 'skill3', id: 'education', component: 'input', type: 'checkbox' }),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'label',
+            null,
+            'Education'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */], { name: 'skill4', id: 'leadership', component: 'input', type: 'checkbox' }),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'label',
+            null,
+            'Leadership & Communication'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */], { name: 'skill5', id: 'personalDevelopment', component: 'input', type: 'checkbox' }),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'label',
+            null,
+            'Personal Development'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null)
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          null,
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'label',
+            { 'class': 'control-label col-md-8' },
+            'How would your rate your ability to use a computer?'
+          )
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { 'class': 'btn-group btn-group-toggle', 'data-toggle': 'buttons', className: 'form-group' },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'label',
+            { 'class': "btn btn-secondary" + (profile.computerSkill == 1 ? " active" : "") },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */], { value: '1', type: 'radio', name: 'computerSkill', id: '1', autocomplete: 'off', component: 'input' }),
+            ' 1'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'label',
+            { 'class': "btn btn-secondary" + (profile.computerSkill == 2 ? " active" : "") },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */], { value: '2', type: 'radio', name: 'computerSkill', id: '2', autocomplete: 'off', component: 'input' }),
+            ' 2'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'label',
+            { 'class': "btn btn-secondary" + (profile.computerSkill == 3 ? " active" : "") },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */], { value: '3', type: 'radio', name: 'computerSkill', id: '3', autocomplete: 'off', component: 'input' }),
+            ' 3'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'label',
+            { 'class': "btn btn-secondary" + (profile.computerSkill == 4 ? " active" : "") },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */], { value: '4', type: 'radio', name: 'computerSkill', id: '4', autocomplete: 'off', component: 'input' }),
+            ' 4'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'label',
+            { 'class': "btn btn-secondary" + (profile.computerSkill == 5 ? " active" : "") },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */], { value: '5', type: 'radio', name: 'computerSkill', id: '5', autocomplete: 'off', component: 'input' }),
+            ' 5'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'label',
+            { 'class': "btn btn-secondary" + (profile.computerSkill == 6 ? " active" : "") },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */], { value: '6', type: 'radio', name: 'computerSkill', id: '6', autocomplete: 'off', component: 'input' }),
+            ' 6'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'label',
+            { 'class': "btn btn-secondary" + (profile.computerSkill == 7 ? " active" : "") },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */], { value: '7', type: 'radio', name: 'computerSkill', id: '7', autocomplete: 'off', component: 'input' }),
+            ' 7'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'label',
+            { 'class': "btn btn-secondary" + (profile.computerSkill == 8 ? " active" : "") },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */], { value: '8', type: 'radio', name: 'computerSkill', id: '8', autocomplete: 'off', component: 'input' }),
+            ' 8'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'label',
+            { 'class': "btn btn-secondary" + (profile.computerSkill == 9 ? " active" : "") },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */], { value: '9', type: 'radio', name: 'computerSkill', id: '9', autocomplete: 'off', component: 'input' }),
+            ' 9'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'label',
+            { 'class': "btn btn-secondary" + (profile.computerSkill == 10 ? " active" : "") },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */], { value: '10', type: 'radio', name: 'computerSkill', id: '10', autocomplete: 'off', component: 'input' }),
+            ' 10'
+          )
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: 'form-group' },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'label',
+            { 'for': 'countryOfOrigin' },
+            'Country of Origin:'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */],
+            { name: 'countryOfOrigin', component: 'select', 'class': 'form-control-lg' },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'option',
+              { selected: true },
+              'Choose...'
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'option',
+              { value: 'france' },
+              'France'
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'option',
+              { value: 'other' },
+              'Other'
+            )
+          )
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { 'class': 'form-group' },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'label',
+            { 'for': 'asylumStatus' },
+            'Asylum Status:'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            null,
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */], {
+              name: 'asylumStatus',
+              component: 'input',
+              type: 'radio',
+              value: 'asylumSeeker' }),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'label',
+              null,
+              ' Asylum Seeker'
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */], {
+              name: 'asylumStatus',
+              component: 'input',
+              type: 'radio',
+              value: 'refugee' }),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'label',
+              null,
+              ' Refugee'
+            )
+          )
+        ),
+        dirty && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: 'form-group' },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'label',
+            null,
+            'Password:'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */], {
+            type: 'password',
+            name: 'password',
+            component: 'input',
+            className: updateProfileFailMsg ? "form-control form-control-lg is-invalid" : "form-control form-control-lg",
+            placeholder: 'your password',
+            required: true
+          }),
+          updateProfileFailMsg && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            { className: 'invalid-feedback' },
+            updateProfileFailMsg
+          )
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { style: { 'paddingTop': '30px' } },
+          this.renderButtons()
         )
-      ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'div',
-        { style: { 'paddingTop': '30px' } },
-        this.renderButtons()
-      )
-    );
+      );
+    }
   }
 }
 
-function mapStateToProps({ auth, user }) {
+function mapStateToProps({ user, auth }) {
   return user.profile ? {
     status: auth.status,
     profile: user.profile,
@@ -13054,15 +13287,19 @@ function mapStateToProps({ auth, user }) {
       firstName: user.profile.name.first,
       lastName: user.profile.name.last,
       phoneNumber: user.profile.phone.number,
+      isMentee: user.profile.isMentee,
       age: user.profile.age,
       gender: user.profile.gender,
-      languages: user.profile.languages,
+      english: user.profile.languages.english,
+      french: user.profile.languages.french,
+      other: user.profile.languages.other,
       course: user.profile.course,
       skill1: user.profile.skills.computerLiteracy,
       skill2: user.profile.skills.coding,
       skill3: user.profile.skills.education,
       skill4: user.profile.skills.leadership,
       skill5: user.profile.skills.personalDevelopment,
+      computerSkill: user.profile.computerSkill,
       countryOfOrigin: user.profile.countryOfOrigin,
       asylumStatus: user.profile.asylumStatus
     },
@@ -13074,7 +13311,8 @@ function mapStateToProps({ auth, user }) {
 }
 
 /* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_1_react_redux__["connect"])(mapStateToProps, { tryConnect: __WEBPACK_IMPORTED_MODULE_3__actions__["tryConnect"], getUserProfile: __WEBPACK_IMPORTED_MODULE_3__actions__["getUserProfile"], updateUserProfile: __WEBPACK_IMPORTED_MODULE_3__actions__["updateUserProfile"] })(Object(__WEBPACK_IMPORTED_MODULE_2_redux_form__["c" /* reduxForm */])({
-  form: 'profileUpdate'
+  form: 'profileUpdate',
+  enableReinitialize: true
 })(Account)));
 
 /***/ }),
@@ -21458,6 +21696,7 @@ class SignupMentee extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
   }
   render() {
     const { handleSubmit } = this.props;
+    this.props.change('isMentee', true);
     return (
       //<CenterCard363>
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -21602,11 +21841,10 @@ class SignupMentee extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                     { "for": "gender" },
                     "Gender:"
                   ),
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
                   __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "select",
-                    {
-                      className: "form-control form-control-lg", id: "gender",
-                      name: "gender" },
+                    __WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */],
+                    { name: "gender", component: "select", "class": "form-control-lg" },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                       "option",
                       { selected: true },
@@ -21614,17 +21852,17 @@ class SignupMentee extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                       "option",
-                      null,
+                      { value: "male" },
                       "Male"
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                       "option",
-                      null,
+                      { value: "female" },
                       "Female"
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                       "option",
-                      null,
+                      { value: "other" },
                       "Other"
                     )
                   )
@@ -21636,17 +21874,31 @@ class SignupMentee extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
               { className: "form-group" },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "label",
-                null,
-                "Languages Spoken:"
+                { "for": "languages" },
+                "Languages:"
               ),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], {
-                name: "languages",
-                type: "text",
-                component: "input",
-                className: "form-control form-control-lg",
-                placeholder: "Languages",
-                required: true
-              })
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { name: "english", id: "english", component: "input", type: "checkbox" }),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "label",
+                null,
+                "English"
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { name: "french", id: "french", component: "input", type: "checkbox" }),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "label",
+                null,
+                "French"
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { name: "other", id: "other", component: "input", type: "checkbox" }),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "label",
+                null,
+                "Other"
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null)
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               "div",
@@ -21656,9 +21908,10 @@ class SignupMentee extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                 { "for": "course" },
                 "Konexio Course:"
               ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "select",
-                { "class": "form-control form-control-lg", id: "course" },
+                __WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */],
+                { name: "course", component: "select", "class": "form-control-lg" },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                   "option",
                   { selected: true },
@@ -21666,89 +21919,65 @@ class SignupMentee extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                   "option",
-                  null,
+                  { value: "course1" },
                   "Course 1"
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                   "option",
-                  null,
+                  { value: "course2" },
                   "Course 2"
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                   "option",
-                  null,
+                  { value: "course3" },
                   "Course 3"
                 )
               )
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               "div",
-              null,
+              { className: "form-group" },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "label",
-                null,
+                { "for": "skills" },
                 "What skills would you like to develop?"
-              )
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "div",
-              { "class": "checkbox" },
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { name: "skill1", id: "computerLiteracy", component: "input", type: "checkbox" }),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "label",
                 null,
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "checkbox", value: "" }),
-                " Learning to Use a Computer"
-              )
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "div",
-              { "class": "checkbox" },
+                "I want to learn how to use a computer"
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { name: "skill2", id: "coding", component: "input", type: "checkbox" }),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "label",
                 null,
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "checkbox", value: "" }),
-                " Coding"
-              )
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "div",
-              { "class": "checkbox" },
+                "I want to learn how to code"
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { name: "skill3", id: "education", component: "input", type: "checkbox" }),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "label",
                 null,
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "checkbox", value: "" }),
-                " Education"
-              )
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "div",
-              { "class": "checkbox" },
+                "I want to improve my level of education"
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { name: "skill4", id: "leadership", component: "input", type: "checkbox" }),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "label",
                 null,
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "checkbox", value: "" }),
-                " Leadership & Communication"
-              )
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "div",
-              { "class": "checkbox" },
+                "I want to know how to communicate and be a leader"
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { name: "skill5", id: "personalDevelopment", component: "input", type: "checkbox" }),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "label",
                 null,
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "checkbox", value: "" }),
-                " Personal Development"
-              )
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "div",
-              { "class": "checkbox" },
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "label",
-                null,
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "checkbox", value: "" }),
-                " Other"
-              )
+                "I want to improve myself"
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null)
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               "div",
@@ -21761,65 +21990,75 @@ class SignupMentee extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               "div",
-              { "class": "btn-group btn-group-toggle", "data-toggle": "buttons" },
+              { "class": "btn-group btn-group-toggle", "data-toggle": "buttons", className: "form-group" },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "label",
                 { "class": "btn btn-secondary active" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "radio", name: "options", id: "option1", autocomplete: "off", checked: true }),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { value: "1", type: "radio", name: "computerSkill", id: "1", autocomplete: "off", component: "input",
+                  parse: Number }),
                 " 1"
               ),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "label",
                 { "class": "btn btn-secondary" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "radio", name: "options", id: "option2", autocomplete: "off" }),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { value: "2", type: "radio", name: "computerSkill", id: "2", autocomplete: "off", component: "input",
+                  parse: Number }),
                 " 2"
               ),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "label",
                 { "class": "btn btn-secondary" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "radio", name: "options", id: "option3", autocomplete: "off" }),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { value: "3", type: "radio", name: "computerSkill", id: "3", autocomplete: "off", component: "input",
+                  parse: Number }),
                 " 3"
               ),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "label",
                 { "class": "btn btn-secondary" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "radio", name: "options", id: "option3", autocomplete: "off" }),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { value: "4", type: "radio", name: "computerSkill", id: "4", autocomplete: "off", component: "input",
+                  parse: Number }),
                 " 4"
               ),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "label",
                 { "class": "btn btn-secondary" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "radio", name: "options", id: "option3", autocomplete: "off" }),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { value: "5", type: "radio", name: "computerSkill", id: "5", autocomplete: "off", component: "input",
+                  parse: Number }),
                 " 5"
               ),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "label",
                 { "class": "btn btn-secondary" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "radio", name: "options", id: "option3", autocomplete: "off" }),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { value: "6", type: "radio", name: "computerSkill", id: "6", autocomplete: "off", component: "input",
+                  parse: Number }),
                 " 6"
               ),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "label",
                 { "class": "btn btn-secondary" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "radio", name: "options", id: "option3", autocomplete: "off" }),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { value: "7", type: "radio", name: "computerSkill", id: "7", autocomplete: "off", component: "input",
+                  parse: Number }),
                 " 7"
               ),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "label",
                 { "class": "btn btn-secondary" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "radio", name: "options", id: "option3", autocomplete: "off" }),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { value: "8", type: "radio", name: "computerSkill", id: "8", autocomplete: "off", component: "input",
+                  parse: Number }),
                 " 8"
               ),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "label",
                 { "class": "btn btn-secondary" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "radio", name: "options", id: "option3", autocomplete: "off" }),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { value: "9", type: "radio", name: "computerSkill", id: "9", autocomplete: "off", component: "input",
+                  parse: Number }),
                 " 9"
               ),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "label",
                 { "class": "btn btn-secondary" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "radio", name: "options", id: "option3", autocomplete: "off" }),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { value: "10", type: "radio", name: "computerSkill", id: "10", autocomplete: "off", component: "input",
+                  parse: Number }),
                 " 10"
               )
             ),
@@ -21828,20 +22067,26 @@ class SignupMentee extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
               { className: "form-group" },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "label",
-                { "for": "country" },
+                { "for": "countryOfOrigin" },
                 "Country of Origin:"
               ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "select",
-                { "class": "form-control form-control-lg", id: "country" },
+                __WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */],
+                { name: "countryOfOrigin", component: "select", "class": "form-control-lg" },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                   "option",
-                  null,
+                  { selected: true },
+                  "Choose..."
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  "option",
+                  { value: "france" },
                   "France"
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                   "option",
-                  null,
+                  { value: "other" },
                   "Other"
                 )
               )
@@ -21851,36 +22096,32 @@ class SignupMentee extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
               { "class": "form-group" },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "label",
-                { "class": "control-label col-md-5" },
+                { "for": "asylumStatus" },
                 "Asylum Status:"
               ),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "div",
-                { "class": "col-md-4" },
+                null,
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], {
+                  name: "asylumStatus",
+                  component: "input",
+                  type: "radio",
+                  value: "asylumSeeker" }),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                   "label",
-                  { "class": "radio-inline control-label" },
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
-                    checked: "checked",
-                    id: "asylumStatusSeeker",
-                    name: "asylumStatus",
-                    type: "radio",
-                    value: "seeker"
-                  }),
-                  " ",
-                  "Asylum Seeker"
+                  null,
+                  " Asylum Seeker"
                 ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], {
+                  name: "asylumStatus",
+                  component: "input",
+                  type: "radio",
+                  value: "refugee" }),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                   "label",
-                  { "class": "radio-inline control-label" },
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
-                    id: "asylumStatusRefugee",
-                    name: "asylumStatus",
-                    type: "radio",
-                    value: "refugee"
-                  }),
-                  " ",
-                  "Refugee"
+                  null,
+                  " Refugee"
                 )
               )
             ),
@@ -22002,6 +22243,7 @@ class SignupMentor extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
   }
   render() {
     const { handleSubmit } = this.props;
+    this.props.change('isMentee', false);
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       __WEBPACK_IMPORTED_MODULE_4__centerCard363__["a" /* default */],
       null,
@@ -22147,11 +22389,10 @@ class SignupMentor extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                     { "for": "gender" },
                     "Gender:"
                   ),
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
                   __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "select",
-                    {
-                      className: "form-control form-control-lg", id: "gender",
-                      name: "gender" },
+                    __WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */],
+                    { name: "gender", component: "select", "class": "form-control-lg" },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                       "option",
                       { selected: true },
@@ -22159,17 +22400,17 @@ class SignupMentor extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                       "option",
-                      null,
+                      { value: "male" },
                       "Male"
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                       "option",
-                      null,
+                      { value: "female" },
                       "Female"
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                       "option",
-                      null,
+                      { value: "other" },
                       "Other"
                     )
                   )
@@ -22181,17 +22422,31 @@ class SignupMentor extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
               { className: "form-group" },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "label",
-                null,
-                "Languages Spoken:"
+                { "for": "languages" },
+                "Languages:"
               ),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], {
-                name: "languages",
-                type: "text",
-                component: "input",
-                className: "form-control form-control-lg",
-                placeholder: "Languages",
-                required: true
-              })
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { name: "english", id: "english", component: "input", type: "checkbox" }),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "label",
+                null,
+                "English"
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { name: "french", id: "french", component: "input", type: "checkbox" }),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "label",
+                null,
+                "French"
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { name: "other", id: "other", component: "input", type: "checkbox" }),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "label",
+                null,
+                "Other"
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null)
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               "div",
@@ -22202,7 +22457,7 @@ class SignupMentor extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                 "Name of Organization:"
               ),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], {
-                name: "org",
+                name: "course",
                 type: "text",
                 component: "input",
                 className: "form-control form-control-lg",
@@ -22212,72 +22467,48 @@ class SignupMentor extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               "div",
-              null,
+              { className: "form-group" },
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "label",
+                { "for": "skills" },
+                "What skills would you like to help others develop?"
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { name: "skill1", id: "computerLiteracy", component: "input", type: "checkbox" }),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "label",
                 null,
-                "What skills in a mentee do you seek/are you willing to help develop?"
-              )
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "div",
-              { "class": "checkbox" },
+                "Learning to Use a Computer"
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { name: "skill2", id: "coding", component: "input", type: "checkbox" }),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "label",
                 null,
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "checkbox", value: "" }),
-                " I want to learn how to use a computer"
-              )
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "div",
-              { "class": "checkbox" },
+                "Coding"
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { name: "skill3", id: "education", component: "input", type: "checkbox" }),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "label",
                 null,
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "checkbox", value: "" }),
-                " I want to learn how to code"
-              )
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "div",
-              { "class": "checkbox" },
+                "Education"
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { name: "skill4", id: "leadership", component: "input", type: "checkbox" }),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "label",
                 null,
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "checkbox", value: "" }),
-                " I want to improve my level of education"
-              )
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "div",
-              { "class": "checkbox" },
+                "Leadership & Communication"
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { name: "skill5", id: "personalDevelopment", component: "input", type: "checkbox" }),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "label",
                 null,
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "checkbox", value: "" }),
-                " I want to know how to communicate and be a leader"
-              )
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "div",
-              { "class": "checkbox" },
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "label",
-                null,
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "checkbox", value: "" }),
-                " I want to better myself"
-              )
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "div",
-              { "class": "checkbox" },
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "label",
-                null,
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "checkbox", value: "" }),
-                " I want to do something else"
-              )
+                "Personal Development"
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null)
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               "div",
@@ -22290,65 +22521,75 @@ class SignupMentor extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               "div",
-              { "class": "btn-group btn-group-toggle", "data-toggle": "buttons" },
+              { "class": "btn-group btn-group-toggle", "data-toggle": "buttons", className: "form-group" },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "label",
                 { "class": "btn btn-secondary active" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "radio", name: "options", id: "option1", autocomplete: "off", checked: true }),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { value: "1", type: "radio", name: "computerSkill", id: "1", autocomplete: "off", component: "input",
+                  parse: Number }),
                 " 1"
               ),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "label",
                 { "class": "btn btn-secondary" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "radio", name: "options", id: "option2", autocomplete: "off" }),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { value: "2", type: "radio", name: "computerSkill", id: "2", autocomplete: "off", component: "input",
+                  parse: Number }),
                 " 2"
               ),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "label",
                 { "class": "btn btn-secondary" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "radio", name: "options", id: "option3", autocomplete: "off" }),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { value: "3", type: "radio", name: "computerSkill", id: "3", autocomplete: "off", component: "input",
+                  parse: Number }),
                 " 3"
               ),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "label",
                 { "class": "btn btn-secondary" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "radio", name: "options", id: "option3", autocomplete: "off" }),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { value: "4", type: "radio", name: "computerSkill", id: "4", autocomplete: "off", component: "input",
+                  parse: Number }),
                 " 4"
               ),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "label",
                 { "class": "btn btn-secondary" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "radio", name: "options", id: "option3", autocomplete: "off" }),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { value: "5", type: "radio", name: "computerSkill", id: "5", autocomplete: "off", component: "input",
+                  parse: Number }),
                 " 5"
               ),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "label",
                 { "class": "btn btn-secondary" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "radio", name: "options", id: "option3", autocomplete: "off" }),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { value: "6", type: "radio", name: "computerSkill", id: "6", autocomplete: "off", component: "input",
+                  parse: Number }),
                 " 6"
               ),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "label",
                 { "class": "btn btn-secondary" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "radio", name: "options", id: "option3", autocomplete: "off" }),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { value: "7", type: "radio", name: "computerSkill", id: "7", autocomplete: "off", component: "input",
+                  parse: Number }),
                 " 7"
               ),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "label",
                 { "class": "btn btn-secondary" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "radio", name: "options", id: "option3", autocomplete: "off" }),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { value: "8", type: "radio", name: "computerSkill", id: "8", autocomplete: "off", component: "input",
+                  parse: Number }),
                 " 8"
               ),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "label",
                 { "class": "btn btn-secondary" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "radio", name: "options", id: "option3", autocomplete: "off" }),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { value: "9", type: "radio", name: "computerSkill", id: "9", autocomplete: "off", component: "input",
+                  parse: Number }),
                 " 9"
               ),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "label",
                 { "class": "btn btn-secondary" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "radio", name: "options", id: "option3", autocomplete: "off" }),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { value: "10", type: "radio", name: "computerSkill", id: "10", autocomplete: "off", component: "input",
+                  parse: Number }),
                 " 10"
               )
             ),
@@ -22357,20 +22598,26 @@ class SignupMentor extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
               { className: "form-group" },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "label",
-                { "for": "country" },
+                { "for": "countryOfOrigin" },
                 "Country of Origin:"
               ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "select",
-                { "class": "form-control form-control-lg", id: "country" },
+                __WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */],
+                { name: "countryOfOrigin", component: "select", "class": "form-control-lg" },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                   "option",
-                  null,
+                  { selected: true },
+                  "Choose..."
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  "option",
+                  { value: "france" },
                   "France"
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                   "option",
-                  null,
+                  { value: "other" },
                   "Other"
                 )
               )
