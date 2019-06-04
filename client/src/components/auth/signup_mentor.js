@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { reduxForm, Field } from "redux-form";
+import { reduxForm, change, Field } from "redux-form";
 import { connect } from "react-redux";
 import { signUserUp } from "../../actions";
 import CenterCard363 from "../centerCard363";
@@ -24,6 +24,7 @@ class SignupMentor extends Component {
   }
   render() {
     const { handleSubmit } = this.props;
+    this.props.change('isMentee', false);
     return (
       <CenterCard363>
         <div className="card">
@@ -81,8 +82,7 @@ class SignupMentor extends Component {
                       type="tel"
                       component="input"
                       className="form-control form-control-lg"
-                      pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                      placeholder="XXX-XXX-XXXX"
+                      placeholder="Phone Number"
                       required
                     />
                   </div>
@@ -106,33 +106,36 @@ class SignupMentor extends Component {
                 <div class="col">
                   <div className="form-group">
                     <label for="gender">Gender:</label>
-                    <select
-                      className="form-control form-control-lg" id="gender"
-                      name="gender">
+                    <br/>
+                    <Field name="gender" component = "select" class="form-control-lg">
                       <option selected>Choose...</option>
-                      <option>Male</option>
-                      <option>Female</option>
-                      <option>Other</option>
-                    </select>
+                      <option value = "male">Male</option>
+                      <option value = "female">Female</option>
+                      <option value = "other">Other</option>
+                    </Field>
                   </div>
                 </div>
               </div>
 
-              <div className="form-group">
-                <label>Languages Spoken:</label>
-                <Field
-                  name="languages"
-                  type="text"
-                  component="input"
-                  className="form-control form-control-lg"
-                  placeholder="Languages"
-                  required
-                />
+              <div className = "form-group">
+              <label for="languages">Languages:</label><br/>
+                <Field name="english" id="english" component="input" type="checkbox"/>
+                <label>English</label>
+                <br/>
+
+                <Field name="french" id="french" component="input" type="checkbox"/>
+                <label>French</label>
+                <br/>
+
+                <Field name="other" id="other" component="input" type="checkbox"/>
+                <label>Other</label>
+                <br/>
               </div>
+
               <div className="form-group">
                 <label>Name of Organization:</label>
                 <Field
-                  name="org"
+                  name="course"
                   type="text"
                   component="input"
                   className="form-control form-control-lg"
@@ -140,87 +143,38 @@ class SignupMentor extends Component {
                   required
                 />
               </div>
-              <div>
-                <label>
-                  What skills in a mentee do you seek/are you willing to help
-                  develop?
-                </label>
-              </div>
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" value="" /> I want to learn how to use a computer
-                </label>
-              </div>
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" value="" /> I want to learn how to code
-                </label>
-              </div>
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" value="" /> I want to improve my level of education
-                </label>
-              </div>
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" value="" /> I want to know how to communicate and be a leader
-                </label>
-              </div>
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" value="" /> I want to better myself
-                </label>
-              </div>
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" value="" /> I want to do something else
-                </label>
-              </div>
 
-              <div>
-                <label class="control-label col-md-8">
-                  How would your rate your ability to use a computer?
-                  </label>
-              </div>
-              <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-secondary active">
-                  <input type="radio" name="options" id="option1" autocomplete="off" checked/> 1
-                </label>
-                <label class="btn btn-secondary">
-                  <input type="radio" name="options" id="option2" autocomplete="off"/> 2
-                </label>
-                <label class="btn btn-secondary">
-                  <input type="radio" name="options" id="option3" autocomplete="off"/> 3
-                </label>
-                <label class="btn btn-secondary">
-                  <input type="radio" name="options" id="option3" autocomplete="off"/> 4
-                </label>
-                <label class="btn btn-secondary">
-                  <input type="radio" name="options" id="option3" autocomplete="off"/> 5
-                </label>
-                <label class="btn btn-secondary">
-                  <input type="radio" name="options" id="option3" autocomplete="off"/> 6
-                </label>
-                <label class="btn btn-secondary">
-                  <input type="radio" name="options" id="option3" autocomplete="off"/> 7
-                </label>
-                <label class="btn btn-secondary">
-                  <input type="radio" name="options" id="option3" autocomplete="off"/> 8
-                </label>
-                <label class="btn btn-secondary">
-                  <input type="radio" name="options" id="option3" autocomplete="off"/> 9
-                </label>
-                <label class="btn btn-secondary">
-                  <input type="radio" name="options" id="option3" autocomplete="off"/> 10
-                </label>
+              <div className = "form-group">
+              <label for="skills">What skills would you like to help others develop?</label><br/>
+                <Field name="skill1" id="computerLiteracy" component="input" type="checkbox"/>
+                <label>Learning to Use a Computer</label>
+                <br/>
+
+                <Field name="skill2" id="coding" component="input" type="checkbox"/>
+                <label>Coding</label>
+                <br/>
+
+                <Field name="skill3" id="education" component="input" type="checkbox"/>
+                <label>Education</label>
+                <br/>
+
+                <Field name="skill4" id="leadership" component="input" type="checkbox"/>
+                <label>Leadership & Communication</label>
+                <br/>
+
+                <Field name="skill5" id="personalDevelopment" component="input" type="checkbox"/>
+                <label>Personal Development</label>
+                <br/>
               </div>
 
               <div className="form-group">
-                <label for="country">Country of Origin:</label>
-                <select class="form-control form-control-lg" id="country">
-                  <option>France</option>
-                  <option>Other</option>
-                </select>
+                <label for="countryOfOrigin">Country of Origin:</label>
+                <br/>
+                <Field name="countryOfOrigin" component = "select" class="form-control-lg">
+                  <option selected>Choose...</option>
+                  <option value = "france">France</option>
+                  <option value = "other">Other</option>
+                </Field>
               </div>
 
               <div className="form-group">

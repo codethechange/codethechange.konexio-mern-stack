@@ -25,9 +25,23 @@ const userSchema = new mongoose.Schema({
             default: false
         }
     },
+    isMentee: Boolean,
     age: Number,
     gender: String,
-    languages: String,
+    languages: {
+        english: {
+            type: Boolean,
+            default: false
+        },
+        french: {
+            type: Boolean,
+            default: false
+        },
+        other: {
+            type: Boolean,
+            default: false
+        }
+    },
     course: String,
     skills: {
       computerLiteracy: {
@@ -51,9 +65,8 @@ const userSchema = new mongoose.Schema({
         default: false
       }
     },
-    computerSkill: Number,
     countryOfOrigin: String,
-    asylumStatus: String,
+    usersMatched: [Object],
     password: String
 })
 

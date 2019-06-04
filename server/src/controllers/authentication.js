@@ -3,8 +3,8 @@ import User from '../models/user';
 
 export default {
     signup : (req, res, next) => {
-        const { email, password, firstName, lastName, phoneNumber, age, gender, languages, course,
-          skill1, skill2, skill3, skill4, skill5, countryOfOrigin, asylumStatus } = req.body;
+        const { email, password, firstName, lastName, phoneNumber, isMentee, age, gender, english, french,
+          other, course, skill1, skill2, skill3, skill4, skill5, countryOfOrigin, usersMatched } = req.body;
 
         if (!email || !password) {
             return res
@@ -31,9 +31,14 @@ export default {
                     phone: {
                         number: phoneNumber
                     },
+                    isMentee: isMentee,
                     age: age,
                     gender: gender,
-                    languages: languages,
+                    languages: {
+                        english: english,
+                        french: french,
+                        other: other
+                    },
                     course: course,
                     skills: {
                         computerLiteracy: skill1,
@@ -43,7 +48,7 @@ export default {
                         personalDevelopment: skill5
                     },
                     countryOfOrigin: countryOfOrigin,
-                    asylumStatus: asylumStatus
+                    usersMatched: usersMatched
                 })
 
                 user.save(function (err, savedUser) {
@@ -96,7 +101,25 @@ export default {
                 name: {
                     first: req.body.firstName,
                     last: req.body.lastName
-                }
+                },
+                isMentee: req.body.isMentee,
+                age: req.body.age,
+                gender: req.body.gender,
+                languages: {
+                    english: req.body.english,
+                    french: req.body.french,
+                    other: req.body.other
+                },
+                course: req.body.course,
+                skills: {
+                    computerLiteracy: req.body.skill1,
+                    coding: req.body.skill2,
+                    education: req.body.skill3,
+                    leadership: req.body.skill4,
+                    personalDevelopment: req.body.skill5
+                },
+                countryOfOrigin: req.body.countryOfOrigin,
+                usersMatched: req.body.usersMatched
             };
             delete newProfile.email;
             delete newProfile.phone;
