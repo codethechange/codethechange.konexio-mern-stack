@@ -108,8 +108,7 @@ class Account extends Component {
               type="tel"
               component="input"
               className="form-control form-control-lg"
-              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-              placeholder="XXX-XXX-XXXX"
+              placeholder="Phone Number"
               required
               />
          </div>
