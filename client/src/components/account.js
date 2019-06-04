@@ -305,7 +305,8 @@ function mapStateToProps({user,auth}) {
         skill5: user.profile.skills.personalDevelopment,
         computerSkill: user.profile.computerSkill,
         countryOfOrigin: user.profile.countryOfOrigin,
-        asylumStatus: user.profile.asylumStatus
+        asylumStatus: user.profile.asylumStatus,
+        usersMatched: user.profile.usersMatched
       },
       updateProfileFailMsg: user.updateProfileFailMsg
   }:{
