@@ -104,7 +104,26 @@ export default {
                 name: {
                     first: req.body.firstName,
                     last: req.body.lastName
-                }
+                },
+                isMentee: isMentee,
+                age: age,
+                gender: gender,
+                languages: {
+                    english: english,
+                    french: french,
+                    other: other
+                },
+                course: course,
+                skills: {
+                    computerLiteracy: skill1,
+                    coding: skill2,
+                    education: skill3,
+                    leadership: skill4,
+                    personalDevelopment: skill5
+                },
+                computerSkill: computerSkill,
+                countryOfOrigin: countryOfOrigin,
+                asylumStatus: asylumStatus
             };
             delete newProfile.email;
             delete newProfile.phone;
