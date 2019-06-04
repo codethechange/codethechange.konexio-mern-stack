@@ -27,7 +27,7 @@ class SignupMentee extends Component {
     const { handleSubmit } = this.props;
     this.props.change('isMentee', true)
     return (
-      //<CenterCard363>
+      <CenterCard363>
         <div className="card">
           <h4 className="card-header">Sign Up</h4>
           <div className="card-body">
@@ -213,7 +213,7 @@ class SignupMentee extends Component {
             </form>
           </div>
         </div>
-      //</CenterCard363>
+      </CenterCard363>
     );
   }
 }
