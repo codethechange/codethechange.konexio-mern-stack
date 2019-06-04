@@ -65,7 +65,7 @@ const userSchema = new mongoose.Schema({
         default: false
       }
     },
-    computerSkill: Number,
+    //computerSkill: Number,
     countryOfOrigin: String,
     usersMatched: [Object],
     password: String
