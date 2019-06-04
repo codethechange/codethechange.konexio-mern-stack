@@ -105,26 +105,26 @@ export default {
                     first: req.body.firstName,
                     last: req.body.lastName
                 },
-                isMentee: isMentee,
-                age: age,
-                gender: gender,
+                isMentee: req.body.isMentee,
+                age: req.body.age,
+                gender: req.body.gender,
                 languages: {
-                    english: english,
-                    french: french,
-                    other: other
+                    english: req.body.english,
+                    french: req.body.french,
+                    other: req.body.other
                 },
-                course: course,
+                course: req.body.course,
                 skills: {
-                    computerLiteracy: skill1,
-                    coding: skill2,
-                    education: skill3,
-                    leadership: skill4,
-                    personalDevelopment: skill5
+                    computerLiteracy: req.body.skill1,
+                    coding: req.body.skill2,
+                    education: req.body.skill3,
+                    leadership: req.body.skill4,
+                    personalDevelopment: req.body.skill5
                 },
-                computerSkill: computerSkill,
-                countryOfOrigin: countryOfOrigin,
-                asylumStatus: asylumStatus,
-                usersMatched: usersMatched
+                computerSkill: req.body.computerSkill,
+                countryOfOrigin: req.body.countryOfOrigin,
+                asylumStatus: req.body.asylumStatus,
+                usersMatched: req.body.usersMatched
             };
             delete newProfile.email;
             delete newProfile.phone;
