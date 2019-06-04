@@ -123,7 +123,8 @@ export default {
                 },
                 computerSkill: computerSkill,
                 countryOfOrigin: countryOfOrigin,
-                asylumStatus: asylumStatus
+                asylumStatus: asylumStatus,
+                usersMatched: usersMatched
             };
             delete newProfile.email;
             delete newProfile.phone;
