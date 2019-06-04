@@ -169,7 +169,7 @@ class Account extends Component {
          </div>
 
          <div className = "form-group">
-         <label for="skills">What skills would you like to develop?</label><br/>
+         <label for="skills">Skills:</label><br/>
            <Field name="skill1" id="computerLiteracy" component="input" type="checkbox"/>
            <label>Learning to Use a Computer</label>
            <br/>
@@ -190,45 +190,6 @@ class Account extends Component {
            <label>Personal Development</label>
            <br/>
          </div>
-
-         <div>
-           <label class="control-label col-md-8">
-             How would your rate your ability to use a computer?
-           </label>
-         </div>
-
-         // <div class="btn-group btn-group-toggle" data-toggle="buttons" className="form-group">
-         //   <label class={"btn btn-secondary" + (profile.computerSkill==1 ? " active": "")}>
-         //     <Field value="1" type="radio" name="computerSkill" id="1" autocomplete="off" component = "input"/> 1
-         //   </label>
-         //   <label class={"btn btn-secondary" + (profile.computerSkill==2 ? " active": "")}>
-         //     <Field value="2" type="radio" name="computerSkill" id="2" autocomplete="off" component = "input"/> 2
-         //   </label>
-         //   <label class={"btn btn-secondary" + (profile.computerSkill==3 ? " active": "")}>
-         //     <Field value="3" type="radio" name="computerSkill" id="3" autocomplete="off" component = "input"/> 3
-         //   </label>
-         //   <label class={"btn btn-secondary" + (profile.computerSkill==4 ? " active": "")}>
-         //     <Field value="4" type="radio" name="computerSkill" id="4" autocomplete="off" component = "input"/> 4
-         //   </label>
-         //   <label class={"btn btn-secondary" + (profile.computerSkill==5 ? " active": "")}>
-         //     <Field value="5" type="radio" name="computerSkill" id="5" autocomplete="off" component = "input"/> 5
-         //   </label>
-         //   <label class={"btn btn-secondary" + (profile.computerSkill==6 ? " active": "")}>
-         //     <Field value="6" type="radio" name="computerSkill" id="6" autocomplete="off" component = "input"/> 6
-         //   </label>
-         //   <label class={"btn btn-secondary" + (profile.computerSkill==7 ? " active": "")}>
-         //     <Field value="7" type="radio" name="computerSkill" id="7" autocomplete="off" component = "input"/> 7
-         //   </label>
-         //   <label class={"btn btn-secondary" + (profile.computerSkill==8 ? " active": "")}>
-         //     <Field value="8" type="radio" name="computerSkill" id="8" autocomplete="off" component = "input"/> 8
-         //   </label>
-         //   <label class={"btn btn-secondary" + (profile.computerSkill==9 ? " active": "")}>
-         //     <Field value="9" type="radio" name="computerSkill" id="9" autocomplete="off" component = "input"/> 9
-         //   </label>
-         //   <label class={"btn btn-secondary" + (profile.computerSkill==10 ? " active": "")}>
-         //     <Field value = "10" type="radio" name="computerSkill" id="10" autocomplete="off" component = "input"/> 10
-         //   </label>
-         // </div>
 
          <div className="form-group">
            <label for="countryOfOrigin">Country of Origin:</label>

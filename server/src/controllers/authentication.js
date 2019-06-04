@@ -47,7 +47,6 @@ export default {
                         leadership: skill4,
                         personalDevelopment: skill5
                     },
-                    //computerSkill: computerSkill,
                     countryOfOrigin: countryOfOrigin,
                     usersMatched: usersMatched
                 })
@@ -119,7 +118,6 @@ export default {
                     leadership: req.body.skill4,
                     personalDevelopment: req.body.skill5
                 },
-                //computerSkill: req.body.computerSkill,
                 countryOfOrigin: req.body.countryOfOrigin,
                 usersMatched: req.body.usersMatched
             };

@@ -168,54 +168,6 @@ class SignupMentor extends Component {
                 <br/>
               </div>
 
-              // <div>
-              //   <label class="control-label col-md-8">
-              //     How would your rate your ability to use a computer?
-              //   </label>
-              // </div>
-              // <div class="btn-group btn-group-toggle" data-toggle="buttons" className="form-group">
-              //   <label class="btn btn-secondary active">
-              //     <Field value="1" type="radio" name="computerSkill" id="1" autocomplete="off" component = "input"
-              //     parse={Number}/> 1
-              //   </label>
-              //   <label class="btn btn-secondary">
-              //     <Field value="2" type="radio" name="computerSkill" id="2" autocomplete="off" component = "input"
-              //     parse={Number}/> 2
-              //   </label>
-              //   <label class="btn btn-secondary">
-              //     <Field value="3" type="radio" name="computerSkill" id="3" autocomplete="off" component = "input"
-              //     parse={Number}/> 3
-              //   </label>
-              //   <label class="btn btn-secondary">
-              //     <Field value="4" type="radio" name="computerSkill" id="4" autocomplete="off" component = "input"
-              //     parse={Number}/> 4
-              //   </label>
-              //   <label class="btn btn-secondary">
-              //     <Field value="5" type="radio" name="computerSkill" id="5" autocomplete="off" component = "input"
-              //     parse={Number}/> 5
-              //   </label>
-              //   <label class="btn btn-secondary">
-              //     <Field value="6" type="radio" name="computerSkill" id="6" autocomplete="off" component = "input"
-              //     parse={Number}/> 6
-              //   </label>
-              //   <label class="btn btn-secondary">
-              //     <Field value="7" type="radio" name="computerSkill" id="7" autocomplete="off" component = "input"
-              //     parse={Number}/> 7
-              //   </label>
-              //   <label class="btn btn-secondary">
-              //     <Field value="8" type="radio" name="computerSkill" id="8" autocomplete="off" component = "input"
-              //     parse={Number}/> 8
-              //   </label>
-              //   <label class="btn btn-secondary">
-              //     <Field value="9" type="radio" name="computerSkill" id="9" autocomplete="off" component = "input"
-              //     parse={Number}/> 9
-              //   </label>
-              //   <label class="btn btn-secondary">
-              //     <Field value="10" type="radio" name="computerSkill" id="10" autocomplete="off" component = "input"
-              //     parse={Number}/> 10
-              //   </label>
-              // </div>
-
               <div className="form-group">
                 <label for="countryOfOrigin">Country of Origin:</label>
                 <br/>
