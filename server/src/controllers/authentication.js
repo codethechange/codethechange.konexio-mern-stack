@@ -4,8 +4,7 @@ import User from '../models/user';
 export default {
     signup : (req, res, next) => {
         const { email, password, firstName, lastName, phoneNumber, isMentee, age, gender, english, french,
-          other, course, skill1, skill2, skill3, skill4, skill5, computerSkill, countryOfOrigin,
-          usersMatched } = req.body;
+          other, course, skill1, skill2, skill3, skill4, skill5, countryOfOrigin, usersMatched } = req.body;
 
         if (!email || !password) {
             return res
@@ -48,7 +47,6 @@ export default {
                         leadership: skill4,
                         personalDevelopment: skill5
                     },
-                    computerSkill: computerSkill,
                     countryOfOrigin: countryOfOrigin,
                     usersMatched: usersMatched
                 })
@@ -120,7 +118,6 @@ export default {
                     leadership: req.body.skill4,
                     personalDevelopment: req.body.skill5
                 },
-                computerSkill: req.body.computerSkill,
                 countryOfOrigin: req.body.countryOfOrigin,
                 usersMatched: req.body.usersMatched
             };
