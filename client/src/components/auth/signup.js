@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { reduxForm, Field } from "redux-form";
+import { reduxForm, change, Field } from "redux-form";
 import { connect } from "react-redux";
 import { signUserUp } from "../../actions";
 import CenterCard363 from "../centerCard363";
@@ -25,6 +25,7 @@ class SignupMentee extends Component {
   }
   render() {
     const { handleSubmit } = this.props;
+    this.props.change('isMentee', true)
     return (
       //<CenterCard363>
         <div className="card">
@@ -118,16 +119,19 @@ class SignupMentee extends Component {
                 </div>
               </div>
 
-              <div className="form-group">
-                <label>Languages Spoken:</label>
-                <Field
-                  name="languages"
-                  type="text"
-                  component="input"
-                  className="form-control form-control-lg"
-                  placeholder="Languages"
-                  required
-                />
+              <div className = "form-group">
+              <label for="languages">Languages:</label><br/>
+                <Field name="english" id="english" component="input" type="checkbox"/>
+                <label>English</label>
+                <br/>
+
+                <Field name="french" id="french" component="input" type="checkbox"/>
+                <label>French</label>
+                <br/>
+
+                <Field name="other" id="other" component="input" type="checkbox"/>
+                <label>Other</label>
+                <br/>
               </div>
 
               <div className="form-group">

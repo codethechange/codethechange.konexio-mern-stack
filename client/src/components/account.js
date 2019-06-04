@@ -56,7 +56,7 @@ class Account extends Component {
     const {editting} = this.state;
     const {handleSubmit, dirty, updateProfileFailMsg, status, profile } = this.props;
     if (profile != null) {
-      //console.log(profile)
+      console.log(profile)
       return (
         <form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
           <div className="form-group">
@@ -139,27 +139,33 @@ class Account extends Component {
            </Field>
          </div>
 
-         <div className="form-group">
-           <label>Languages Spoken:</label>
-           <Field
-             name="languages"
-             type="text"
-             component="input"
-             className="form-control form-control-lg"
-             placeholder="Languages"
-             required
-           />
+         <div className = "form-group">
+         <label for="languages">Languages:</label><br/>
+           <Field name="english" id="english" component="input" type="checkbox"/>
+           <label>English</label>
+           <br/>
+
+           <Field name="french" id="french" component="input" type="checkbox"/>
+           <label>French</label>
+           <br/>
+
+           <Field name="other" id="other" component="input" type="checkbox"/>
+           <label>Other</label>
+           <br/>
          </div>
 
          <div className="form-group">
-           <label for="course">Konexio Course:</label>
-           <br/>
-           <Field name="course" component = "select" class="form-control-lg">
-             <option selected>Choose...</option>
-             <option value = "course1">Course 1</option>
-             <option value = "course2">Course 2</option>
-             <option value = "course3">Course 3</option>
-           </Field>
+           <label>Konexio Course/Organization:</label>
+           <Field
+             disabled
+             readOnly
+             name="course"
+             type="text"
+             component="input"
+             className="form-control form-control-lg"
+             placeholder="Course"
+             required
+           />
          </div>
 
          <div className = "form-group">
@@ -288,7 +294,9 @@ function mapStateToProps({user,auth}) {
         isMentee: user.profile.isMentee,
         age: user.profile.age,
         gender: user.profile.gender,
-        languages: user.profile.languages,
+        english: user.profile.languages.english,
+        french: user.profile.languages.french,
+        other: user.profile.languages.other,
         course: user.profile.course,
         skill1: user.profile.skills.computerLiteracy,
         skill2: user.profile.skills.coding,

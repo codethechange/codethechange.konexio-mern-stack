@@ -3,8 +3,9 @@ import User from '../models/user';
 
 export default {
     signup : (req, res, next) => {
-        const { email, password, firstName, lastName, phoneNumber, isMentee, age, gender, languages, course,
-          skill1, skill2, skill3, skill4, skill5, computerSkill, countryOfOrigin, asylumStatus } = req.body;
+        const { email, password, firstName, lastName, phoneNumber, isMentee, age, gender, english, french,
+          other, course, skill1, skill2, skill3, skill4, skill5, computerSkill, countryOfOrigin,
+          asylumStatus } = req.body;
 
         if (!email || !password) {
             return res
@@ -34,7 +35,11 @@ export default {
                     isMentee: isMentee,
                     age: age,
                     gender: gender,
-                    languages: languages,
+                    languages: {
+                        english: english,
+                        french: french,
+                        other: other
+                    },
                     course: course,
                     skills: {
                         computerLiteracy: skill1,
