@@ -49,7 +49,10 @@ class Account extends Component {
         <button disabled={submitting} className="btn-lg btn btn-secondary btn-block" onClick={this.cancelForm.bind(this)}>Cancel</button>
       </div>)
     }else{
-      return (<button className="btn btn-light btn-lg btn-block" onClick={this.switchEditting.bind(this)}>Update Information</button>)
+      return (<div>
+        <button className="btn btn-light btn-lg btn-block" onClick={this.switchEditting.bind(this)}>Update Information</button>
+        <button className="btn btn-primary btn-lg btn-block">Match</button>
+      </div>)
     }
   }
   renderProfileForm(){
@@ -203,7 +206,7 @@ class Account extends Component {
         {dirty && <div className="form-group">
           <label>Password:</label>
           <Field
-            type= 'password'
+            type='password'
             name="password"
             component="input"
             className={(updateProfileFailMsg)?"form-control form-control-lg is-invalid":"form-control form-control-lg"}

@@ -12,9 +12,6 @@ import "../../style/myConnections.scss";
 class MyConnections extends Component {
   constructor(){
     super();
-    this.state = {
-      editting: false
-    }
   }
   componentWillMount() {
     this.props.tryConnect();
