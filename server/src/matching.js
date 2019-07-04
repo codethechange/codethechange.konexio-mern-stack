@@ -258,25 +258,39 @@ function match(users, menteeId) {
     return mentor[mentorList[0]];
 }
 
+// Implement the updated matching function here.
 export function match2(userId) {
-  // Implement the updated matching function here.
-  function findUsers(name, query, callback) {
+
+  // First, match2() finds data about the current user.
+  User.findOne(
+      { _id: userId },
+      function(err, user) {
+          err ? console.log(err) : findUsers(user, 'users', {}, doMatching)
+      }
+  );
+
+  // Then, match2() finds the entire collection of users and starts matching with the callback.
+  function findUsers(currUser, name, query, callback) {
       mongoose.connection.db.collection(name, function(err, collection) {
           collection.find(query).toArray(function(err, data) {
-              //console.log(data);
-              callback(data);
+              if (err) {
+                  console.log(err)
+              } else {
+                  //console.log(data);
+                  callback(currUser, data);
+              }
           });
       });
   }
+
   // Callback function; the matching process should be done here and log an ObjectId of the chosen user.
-  let doMatching = (usersData) => {
+  let doMatching = (currUser, usersData) => {
       // For loop that shows how the user collection is structured.
       for (let i = 0; i < usersData.length; i++) {
           console.log(usersData[i]);
       }
+      console.log("Current User: " + currUser);
   }
-  // Calls findUsers with the callback function as a 3rd parameter.
-  findUsers('users', {}, doMatching);
 }
 
 /* Example run */

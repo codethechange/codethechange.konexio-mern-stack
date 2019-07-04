@@ -136,7 +136,7 @@ export default {
 
     updateMatch: (req, res, next) => {
           const userId = req.user._id;
-          console.log(userId);
+          //console.log(userId);
           match2(userId);
           const newProfile = {
               name: {
