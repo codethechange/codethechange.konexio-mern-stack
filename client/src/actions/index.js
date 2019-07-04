@@ -1,12 +1,12 @@
 import axios from 'axios';
-import { 
+import {
     AUTH_USER,
     UNAUTH_USER,
     AUTH_ERROR,
     TRY_CONNECT,
     GET_USER_PROFILE,
     UPDATE_USER_PROFILE_GOOD,
-    UPDATE_USER_PROFILE_FAIL 
+    UPDATE_USER_PROFILE_FAIL
 } from './types';
 const ROOT_URL = process.env.API_URI || 'http://localhost:8000';
 
@@ -104,6 +104,22 @@ export function updateUserProfile(profile) {
                         payload: "Incorrect Password. Please try it again."
                     })
                 }
+            });
+    }
+}
+
+export function updateUserMatch(profile) {
+    return function (dispatch) {
+        axios
+            .post(`/api/userProfile/match`, profile)
+            .then(() => {
+                dispatch({
+                    type: UPDATE_USER_PROFILE_GOOD
+                })
+                window.location = '/#myConnections';
+            })
+            .catch(error => {
+                console.log(error.response.data)
             });
     }
 }

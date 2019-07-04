@@ -1,4 +1,5 @@
-import User from 'models/user'
+import mongoose from 'mongoose';
+import User from '../src/models/user'
 /*
  * File: matching.js
  * -----------------
@@ -162,8 +163,7 @@ function languageMatch(mentorLanguages, menteeLanguages) {
 
 
 /* Code for matching algorithm */
-export function match(users, menteeId) {
-
+function match(users, menteeId) {
     var usersData = ref(users);
     var keys = Object.keys(users);
     var mentee = new Map();
@@ -258,5 +258,26 @@ export function match(users, menteeId) {
     return mentor[mentorList[0]];
 }
 
+export function match2(userId) {
+  // Implement the updated matching function here.
+  function findUsers(name, query, callback) {
+      mongoose.connection.db.collection(name, function(err, collection) {
+          collection.find(query).toArray(function(err, data) {
+              //console.log(data);
+              callback(data);
+          });
+      });
+  }
+  // Callback function; the matching process should be done here and log an ObjectId of the chosen user.
+  let doMatching = (usersData) => {
+      // For loop that shows how the user collection is structured.
+      for (let i = 0; i < usersData.length; i++) {
+          console.log(usersData[i]);
+      }
+  }
+  // Calls findUsers with the callback function as a 3rd parameter.
+  findUsers('users', {}, doMatching);
+}
+
 /* Example run */
-console.log(match(users, '7sq7biew9e08492lm2975e'));
+//console.log(match(users, '7sq7biew9e08492lm2975e'));

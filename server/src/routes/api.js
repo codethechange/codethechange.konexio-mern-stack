@@ -12,4 +12,6 @@ router.get('/userProfile', (req, res)=>{
 
 router.post('/userProfile', Authentication.updateProfile)
 
+router.post('/userProfile/match', Authentication.updateMatch)
+
 export default router;
