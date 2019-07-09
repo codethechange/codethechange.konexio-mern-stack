@@ -5,6 +5,7 @@ import {
     AUTH_ERROR,
     TRY_CONNECT,
     GET_USER_PROFILE,
+    GET_USER_MATCHES,
     UPDATE_USER_PROFILE_GOOD,
     UPDATE_USER_PROFILE_FAIL
 } from './types';
@@ -79,6 +80,20 @@ export function getUserProfile() {
             .then(res => {
                 dispatch({
                     type: GET_USER_PROFILE,
+                    payload: res.data
+                })
+            })
+            .catch(error => console.log(error.response.data));
+    }
+}
+
+export function getUserMatches() {
+    return function (dispatch) {
+        axios
+            .get(`/api/userProfile/match`)
+            .then(res => {
+                dispatch({
+                    type: GET_USER_MATCHES,
                     payload: res.data
                 })
             })
