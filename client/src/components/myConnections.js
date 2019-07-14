@@ -11,7 +11,7 @@ import profilePic from '../images/profile_pic.png';
 import "../../style/myConnections.scss";
 
 class MyConnections extends Component {
-  constructor(){
+  constructor() {
     super();
   }
   componentWillMount() {
