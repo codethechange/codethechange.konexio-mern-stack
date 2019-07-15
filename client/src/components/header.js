@@ -24,8 +24,8 @@ class Header extends Component {
     render() {
         if(this.props.authenticated){
             return (
-                <nav className="navbar navbar-expand-sm navbar-light bg-light">
-                    <NavLink className="navbar-brand" to="/">Konexio</NavLink>
+                <nav className="navbar navbar-expand-sm navbar-dark bg-primary">
+                    <NavLink className="navbar-brand" to="/myConnections">Konexio BETA</NavLink>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -46,8 +46,8 @@ class Header extends Component {
             )
         } else{
             return(
-                <nav className="navbar navbar-expand-sm navbar-light bg-light">
-                    <NavLink className="navbar-brand" to="/">Konexio</NavLink>
+                <nav className="navbar navbar-expand-sm navbar-dark bg-primary">
+                    <NavLink className="navbar-brand" to="/">Konexio BETA</NavLink>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>

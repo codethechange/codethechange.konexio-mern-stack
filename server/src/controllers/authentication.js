@@ -1,6 +1,6 @@
 import token from '../services/token';
 import User from '../models/user';
-import { match2 } from '../matching';
+import { match } from '../matching';
 
 export default {
     signup : (req, res, next) => {
@@ -137,7 +137,6 @@ export default {
     updateMatch: (req, res, next) => {
           const userId = req.user._id;
           //console.log(userId);
-          match2(userId);
           const newProfile = {
               name: {
                   first: req.body.firstName,
@@ -167,9 +166,21 @@ export default {
           delete newProfile.phone;
           delete newProfile.password;
 
-          User.findByIdAndUpdate(userId, newProfile, {new: true})
-          .then(newUser=>{
-              res.sendStatus(200);
+          //match2(userId, newProfile);
+          match(userId)
+          .then((matchedUserId) => {
+              //console.log(matchedUserId);
+              newProfile.usersMatched.push(matchedUserId);
+              //console.log(JSON.stringify(newProfile));
+              User.findByIdAndUpdate(userId, newProfile, {new: true})
+              .then(newUser => {
+                  User.findByIdAndUpdate(matchedUserId, {$push: {usersMatched: userId}}, {new: true})
+                  .then(newMatchedUser => {
+                      res.sendStatus(200);
+                  })
+                  .catch(next)
+              })
+              .catch(next)
           })
           .catch(next)
   }
