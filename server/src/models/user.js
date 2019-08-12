@@ -66,7 +66,7 @@ const userSchema = new mongoose.Schema({
       }
     },
     countryOfOrigin: String,
-    usersMatched: [Object],
+    usersMatched: [{type: mongoose.Schema.Types.ObjectId}],
     password: String
 })
 

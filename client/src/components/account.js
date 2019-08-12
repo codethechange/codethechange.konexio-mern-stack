@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {reduxForm, Field} from 'redux-form';
-import {tryConnect, getUserProfile, updateUserProfile} from '../actions';
+import {tryConnect, getUserProfile, updateUserProfile, updateUserMatch} from '../actions';
 import CenterCard363 from './centerCard363';
 
 class Account extends Component {
@@ -31,8 +31,11 @@ class Account extends Component {
       </CenterCard363>
     );
   }
-  handleFormSubmit(d){
+  handleFormSubmit(d) {
     this.props.updateUserProfile(d)
+  }
+  handleUserMatch(d) {
+    this.props.updateUserMatch(d)
   }
   switchEditting() {
     this.setState({editting: !this.state.editting})
@@ -42,14 +45,17 @@ class Account extends Component {
     this.props.reset();
   }
   renderButtons() {
-    const {submitting, dirty} = this.props;
+    const {submitting, dirty, handleSubmit} = this.props;
     if(this.state.editting){
       return (<div className="form-group">
         <button disabled={!dirty} type="submit" className="btn-lg btn btn-light btn-block">Save Change</button>
         <button disabled={submitting} className="btn-lg btn btn-secondary btn-block" onClick={this.cancelForm.bind(this)}>Cancel</button>
       </div>)
     }else{
-      return (<button className="btn btn-light btn-lg btn-block" onClick={this.switchEditting.bind(this)}>Update Information</button>)
+      return (<div>
+        <button className="btn btn-light btn-lg btn-block" onClick={this.switchEditting.bind(this)}>Update Information</button>
+        <button type="button" className="btn btn-primary btn-lg btn-block" onClick={handleSubmit(this.handleUserMatch.bind(this))}>Match</button>
+      </div>)
     }
   }
   renderProfileForm(){
@@ -203,7 +209,7 @@ class Account extends Component {
         {dirty && <div className="form-group">
           <label>Password:</label>
           <Field
-            type= 'password'
+            type='password'
             name="password"
             component="input"
             className={(updateProfileFailMsg)?"form-control form-control-lg is-invalid":"form-control form-control-lg"}
@@ -255,7 +261,7 @@ function mapStateToProps({user,auth}) {
 }
 
 
-export default connect(mapStateToProps, {tryConnect, getUserProfile, updateUserProfile})(reduxForm({
+export default connect(mapStateToProps, {tryConnect, getUserProfile, updateUserProfile, updateUserMatch})(reduxForm({
   form: 'profileUpdate',
   enableReinitialize : true
 })(Account));

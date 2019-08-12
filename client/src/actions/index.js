@@ -5,6 +5,7 @@ import {
     AUTH_ERROR,
     TRY_CONNECT,
     GET_USER_PROFILE,
+    GET_USER_MATCHES,
     UPDATE_USER_PROFILE_GOOD,
     UPDATE_USER_PROFILE_FAIL
 } from './types';
@@ -86,6 +87,20 @@ export function getUserProfile() {
     }
 }
 
+export function getUserMatches() {
+    return function (dispatch) {
+        axios
+            .get(`/api/userProfile/match`)
+            .then(res => {
+                dispatch({
+                    type: GET_USER_MATCHES,
+                    payload: res.data
+                })
+            })
+            .catch(error => console.log(error.response.data));
+    }
+}
+
 export function updateUserProfile(profile) {
     return function (dispatch) {
         axios
@@ -104,6 +119,22 @@ export function updateUserProfile(profile) {
                         payload: "Incorrect Password. Please try it again."
                     })
                 }
+            });
+    }
+}
+
+export function updateUserMatch(profile) {
+    return function (dispatch) {
+        axios
+            .post(`/api/userProfile/match`, profile)
+            .then(() => {
+                dispatch({
+                    type: UPDATE_USER_PROFILE_GOOD
+                })
+                window.location = '/#myConnections';
+            })
+            .catch(error => {
+                console.log(error.response.data)
             });
     }
 }

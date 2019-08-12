@@ -1,5 +1,6 @@
 import token from '../services/token';
 import User from '../models/user';
+import { match } from '../matching';
 
 export default {
     signup : (req, res, next) => {
@@ -131,6 +132,57 @@ export default {
             })
             .catch(next)
         })
-    }
+    },
+
+    updateMatch: (req, res, next) => {
+          const userId = req.user._id;
+          //console.log(userId);
+          const newProfile = {
+              name: {
+                  first: req.body.firstName,
+                  last: req.body.lastName
+              },
+              isMentee: req.body.isMentee,
+              age: req.body.age,
+              gender: req.body.gender,
+              languages: {
+                  english: req.body.english,
+                  french: req.body.french,
+                  other: req.body.other
+              },
+              course: req.body.course,
+              skills: {
+                  computerLiteracy: req.body.skill1,
+                  coding: req.body.skill2,
+                  education: req.body.skill3,
+                  leadership: req.body.skill4,
+                  personalDevelopment: req.body.skill5
+              },
+              countryOfOrigin: req.body.countryOfOrigin,
+              usersMatched: req.body.usersMatched
+          };
+          //newProfile.usersMatched.push(userId);
+          delete newProfile.email;
+          delete newProfile.phone;
+          delete newProfile.password;
+
+          //match2(userId, newProfile);
+          match(userId)
+          .then((matchedUserId) => {
+              //console.log(matchedUserId);
+              newProfile.usersMatched.push(matchedUserId);
+              //console.log(JSON.stringify(newProfile));
+              User.findByIdAndUpdate(userId, newProfile, {new: true})
+              .then(newUser => {
+                  User.findByIdAndUpdate(matchedUserId, {$push: {usersMatched: userId}}, {new: true})
+                  .then(newMatchedUser => {
+                      res.sendStatus(200);
+                  })
+                  .catch(next)
+              })
+              .catch(next)
+          })
+          .catch(next)
+  }
 
 }
