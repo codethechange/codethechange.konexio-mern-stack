@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/amazingandyyy/mern-stack.git"
+    "url": "git+https://github.com/codethechange/codethechange.konexio-mern-stack"
   },
   "keywords": [
     "react"
@@ -20,10 +20,12 @@
   "author": "Amazingandyyy <amazingandyyy@gmail.com> (Andy Chen)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/amazingandyyy/mern-stack/issues"
+    "url": "https://github.com/codethechange/codethechange.konexio-mern-stack/issues"
   },
-  "homepage": "https://github.com/amazingandyyy/mern-stack#readme",
+  "homepage": "https://github.com/codethechange/codethechange.konexio-mern-stack/blob/master/README.md",
   "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
     "eslint": "^4.14.0",
     "eslint-config-logux": "^17.0.0",
     "eslint-config-standard": "^10.2.1",
@@ -39,5 +41,7 @@
     "lodash": ">=4.17.11",
     "nodemon": "^1.17.5"
   },
-  "dependencies": {}
+  "dependencies": {
+    "babel-cli": "^6.26.0"
+  }
 }
