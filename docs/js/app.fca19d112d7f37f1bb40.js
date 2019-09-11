@@ -12957,8 +12957,7 @@ class Account extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
             type: 'tel',
             component: 'input',
             className: 'form-control form-control-lg',
-            pattern: '[0-9]{3}-[0-9]{3}-[0-9]{4}',
-            placeholder: 'XXX-XXX-XXXX',
+            placeholder: 'Phone Number',
             required: true
           })
         ),
@@ -13071,7 +13070,7 @@ class Account extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'label',
             { 'for': 'skills' },
-            'What skills would you like to develop?'
+            'Skills:'
           ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */], { name: 'skill1', id: 'computerLiteracy', component: 'input', type: 'checkbox' }),
@@ -13112,79 +13111,6 @@ class Account extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'div',
-          null,
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'label',
-            { 'class': 'control-label col-md-8' },
-            'How would your rate your ability to use a computer?'
-          )
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'div',
-          { 'class': 'btn-group btn-group-toggle', 'data-toggle': 'buttons', className: 'form-group' },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'label',
-            { 'class': "btn btn-secondary" + (profile.computerSkill == 1 ? " active" : "") },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */], { value: '1', type: 'radio', name: 'computerSkill', id: '1', autocomplete: 'off', component: 'input' }),
-            ' 1'
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'label',
-            { 'class': "btn btn-secondary" + (profile.computerSkill == 2 ? " active" : "") },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */], { value: '2', type: 'radio', name: 'computerSkill', id: '2', autocomplete: 'off', component: 'input' }),
-            ' 2'
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'label',
-            { 'class': "btn btn-secondary" + (profile.computerSkill == 3 ? " active" : "") },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */], { value: '3', type: 'radio', name: 'computerSkill', id: '3', autocomplete: 'off', component: 'input' }),
-            ' 3'
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'label',
-            { 'class': "btn btn-secondary" + (profile.computerSkill == 4 ? " active" : "") },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */], { value: '4', type: 'radio', name: 'computerSkill', id: '4', autocomplete: 'off', component: 'input' }),
-            ' 4'
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'label',
-            { 'class': "btn btn-secondary" + (profile.computerSkill == 5 ? " active" : "") },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */], { value: '5', type: 'radio', name: 'computerSkill', id: '5', autocomplete: 'off', component: 'input' }),
-            ' 5'
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'label',
-            { 'class': "btn btn-secondary" + (profile.computerSkill == 6 ? " active" : "") },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */], { value: '6', type: 'radio', name: 'computerSkill', id: '6', autocomplete: 'off', component: 'input' }),
-            ' 6'
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'label',
-            { 'class': "btn btn-secondary" + (profile.computerSkill == 7 ? " active" : "") },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */], { value: '7', type: 'radio', name: 'computerSkill', id: '7', autocomplete: 'off', component: 'input' }),
-            ' 7'
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'label',
-            { 'class': "btn btn-secondary" + (profile.computerSkill == 8 ? " active" : "") },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */], { value: '8', type: 'radio', name: 'computerSkill', id: '8', autocomplete: 'off', component: 'input' }),
-            ' 8'
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'label',
-            { 'class': "btn btn-secondary" + (profile.computerSkill == 9 ? " active" : "") },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */], { value: '9', type: 'radio', name: 'computerSkill', id: '9', autocomplete: 'off', component: 'input' }),
-            ' 9'
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'label',
-            { 'class': "btn btn-secondary" + (profile.computerSkill == 10 ? " active" : "") },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */], { value: '10', type: 'radio', name: 'computerSkill', id: '10', autocomplete: 'off', component: 'input' }),
-            ' 10'
-          )
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'div',
           { className: 'form-group' },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'label',
@@ -13209,40 +13135,6 @@ class Account extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
               'option',
               { value: 'other' },
               'Other'
-            )
-          )
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'div',
-          { 'class': 'form-group' },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'label',
-            { 'for': 'asylumStatus' },
-            'Asylum Status:'
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'div',
-            null,
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */], {
-              name: 'asylumStatus',
-              component: 'input',
-              type: 'radio',
-              value: 'asylumSeeker' }),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'label',
-              null,
-              ' Asylum Seeker'
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_redux_form__["a" /* Field */], {
-              name: 'asylumStatus',
-              component: 'input',
-              type: 'radio',
-              value: 'refugee' }),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'label',
-              null,
-              ' Refugee'
             )
           )
         ),
@@ -13299,9 +13191,9 @@ function mapStateToProps({ user, auth }) {
       skill3: user.profile.skills.education,
       skill4: user.profile.skills.leadership,
       skill5: user.profile.skills.personalDevelopment,
-      computerSkill: user.profile.computerSkill,
+      //computerSkill: user.profile.computerSkill,
       countryOfOrigin: user.profile.countryOfOrigin,
-      asylumStatus: user.profile.asylumStatus
+      usersMatched: user.profile.usersMatched
     },
     updateProfileFailMsg: user.updateProfileFailMsg
   } : {
@@ -21697,8 +21589,9 @@ class SignupMentee extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
   render() {
     const { handleSubmit } = this.props;
     this.props.change('isMentee', true);
-    return (
-      //<CenterCard363>
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      __WEBPACK_IMPORTED_MODULE_4__centerCard363__["a" /* default */],
+      null,
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         "div",
         { className: "card" },
@@ -21799,8 +21692,7 @@ class SignupMentee extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                     type: "tel",
                     component: "input",
                     className: "form-control form-control-lg",
-                    pattern: "[0-9]{3}-[0-9]{3}-[0-9]{4}",
-                    placeholder: "XXX-XXX-XXXX",
+                    placeholder: "Phone Number",
                     required: true
                   })
                 )
@@ -21981,89 +21873,6 @@ class SignupMentee extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               "div",
-              null,
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "label",
-                { "class": "control-label col-md-8" },
-                "How would your rate your ability to use a computer?"
-              )
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "div",
-              { "class": "btn-group btn-group-toggle", "data-toggle": "buttons", className: "form-group" },
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "label",
-                { "class": "btn btn-secondary active" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { value: "1", type: "radio", name: "computerSkill", id: "1", autocomplete: "off", component: "input",
-                  parse: Number }),
-                " 1"
-              ),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "label",
-                { "class": "btn btn-secondary" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { value: "2", type: "radio", name: "computerSkill", id: "2", autocomplete: "off", component: "input",
-                  parse: Number }),
-                " 2"
-              ),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "label",
-                { "class": "btn btn-secondary" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { value: "3", type: "radio", name: "computerSkill", id: "3", autocomplete: "off", component: "input",
-                  parse: Number }),
-                " 3"
-              ),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "label",
-                { "class": "btn btn-secondary" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { value: "4", type: "radio", name: "computerSkill", id: "4", autocomplete: "off", component: "input",
-                  parse: Number }),
-                " 4"
-              ),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "label",
-                { "class": "btn btn-secondary" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { value: "5", type: "radio", name: "computerSkill", id: "5", autocomplete: "off", component: "input",
-                  parse: Number }),
-                " 5"
-              ),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "label",
-                { "class": "btn btn-secondary" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { value: "6", type: "radio", name: "computerSkill", id: "6", autocomplete: "off", component: "input",
-                  parse: Number }),
-                " 6"
-              ),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "label",
-                { "class": "btn btn-secondary" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { value: "7", type: "radio", name: "computerSkill", id: "7", autocomplete: "off", component: "input",
-                  parse: Number }),
-                " 7"
-              ),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "label",
-                { "class": "btn btn-secondary" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { value: "8", type: "radio", name: "computerSkill", id: "8", autocomplete: "off", component: "input",
-                  parse: Number }),
-                " 8"
-              ),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "label",
-                { "class": "btn btn-secondary" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { value: "9", type: "radio", name: "computerSkill", id: "9", autocomplete: "off", component: "input",
-                  parse: Number }),
-                " 9"
-              ),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "label",
-                { "class": "btn btn-secondary" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { value: "10", type: "radio", name: "computerSkill", id: "10", autocomplete: "off", component: "input",
-                  parse: Number }),
-                " 10"
-              )
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "div",
               { className: "form-group" },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "label",
@@ -22088,40 +21897,6 @@ class SignupMentee extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                   "option",
                   { value: "other" },
                   "Other"
-                )
-              )
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "div",
-              { "class": "form-group" },
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "label",
-                { "for": "asylumStatus" },
-                "Asylum Status:"
-              ),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "div",
-                null,
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], {
-                  name: "asylumStatus",
-                  component: "input",
-                  type: "radio",
-                  value: "asylumSeeker" }),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                  "label",
-                  null,
-                  " Asylum Seeker"
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], {
-                  name: "asylumStatus",
-                  component: "input",
-                  type: "radio",
-                  value: "refugee" }),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                  "label",
-                  null,
-                  " Refugee"
                 )
               )
             ),
@@ -22175,8 +21950,6 @@ class SignupMentee extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
           )
         )
       )
-      //</CenterCard363>
-
     );
   }
 }
@@ -22347,8 +22120,7 @@ class SignupMentor extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                     type: "tel",
                     component: "input",
                     className: "form-control form-control-lg",
-                    pattern: "[0-9]{3}-[0-9]{3}-[0-9]{4}",
-                    placeholder: "XXX-XXX-XXXX",
+                    placeholder: "Phone Number",
                     required: true
                   })
                 )
@@ -22509,89 +22281,6 @@ class SignupMentor extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                 "Personal Development"
               ),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null)
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "div",
-              null,
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "label",
-                { "class": "control-label col-md-8" },
-                "How would your rate your ability to use a computer?"
-              )
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "div",
-              { "class": "btn-group btn-group-toggle", "data-toggle": "buttons", className: "form-group" },
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "label",
-                { "class": "btn btn-secondary active" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { value: "1", type: "radio", name: "computerSkill", id: "1", autocomplete: "off", component: "input",
-                  parse: Number }),
-                " 1"
-              ),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "label",
-                { "class": "btn btn-secondary" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { value: "2", type: "radio", name: "computerSkill", id: "2", autocomplete: "off", component: "input",
-                  parse: Number }),
-                " 2"
-              ),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "label",
-                { "class": "btn btn-secondary" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { value: "3", type: "radio", name: "computerSkill", id: "3", autocomplete: "off", component: "input",
-                  parse: Number }),
-                " 3"
-              ),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "label",
-                { "class": "btn btn-secondary" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { value: "4", type: "radio", name: "computerSkill", id: "4", autocomplete: "off", component: "input",
-                  parse: Number }),
-                " 4"
-              ),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "label",
-                { "class": "btn btn-secondary" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { value: "5", type: "radio", name: "computerSkill", id: "5", autocomplete: "off", component: "input",
-                  parse: Number }),
-                " 5"
-              ),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "label",
-                { "class": "btn btn-secondary" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { value: "6", type: "radio", name: "computerSkill", id: "6", autocomplete: "off", component: "input",
-                  parse: Number }),
-                " 6"
-              ),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "label",
-                { "class": "btn btn-secondary" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { value: "7", type: "radio", name: "computerSkill", id: "7", autocomplete: "off", component: "input",
-                  parse: Number }),
-                " 7"
-              ),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "label",
-                { "class": "btn btn-secondary" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { value: "8", type: "radio", name: "computerSkill", id: "8", autocomplete: "off", component: "input",
-                  parse: Number }),
-                " 8"
-              ),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "label",
-                { "class": "btn btn-secondary" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { value: "9", type: "radio", name: "computerSkill", id: "9", autocomplete: "off", component: "input",
-                  parse: Number }),
-                " 9"
-              ),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "label",
-                { "class": "btn btn-secondary" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], { value: "10", type: "radio", name: "computerSkill", id: "10", autocomplete: "off", component: "input",
-                  parse: Number }),
-                " 10"
-              )
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               "div",
