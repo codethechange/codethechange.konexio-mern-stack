@@ -95,4 +95,6 @@ userSchema.methods.comparedPassword = function(candidatePassword, cb) {
 }
 
 // Export the model
-export default mongoose.model('User', userSchema);
+export default (mongoose.models && mongoose.models.User
+  ? mongoose.models.User 
+  : mongoose.model('User', userSchema));
