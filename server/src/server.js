@@ -21,7 +21,7 @@ mongoose.Promise = global.Promise;
 
 // App Setup
 app.use(cors({
-    origin: ['https://codethechange.github.io/', 'http://localhost:3000', 'https://konexio-server.herokuapp.com']
+    origin: ['https://codethechange.github.io', 'http://localhost:3000', 'https://konexio-server.herokuapp.com']
 }));
 app.use(morgan('dev'));
 app.use(bodyParser.json());
