@@ -25,7 +25,7 @@ export function signUserIn(data) {
             .then(res => {
                 dispatch({type: AUTH_USER})
                 localStorage.setItem('auth_jwt_token', res.data.token);
-                window.location = 'codethechange.konexio-mern-stack/#account';
+                window.location = '/codethechange.konexio-mern-stack/#account';
                 axios.defaults.headers.common['Authorization'] = localStorage.getItem('auth_jwt_token');
             })
             .catch(error => {
@@ -43,7 +43,7 @@ export function signUserUp(userObj) {
             .then(res => {
                 dispatch({type: AUTH_USER})
                 localStorage.setItem('auth_jwt_token', res.data.token);
-                window.location = 'codethechange.konexio-mern-stack/#account';
+                window.location = '/codethechange.konexio-mern-stack/#account';
                 axios.defaults.headers.common['Authorization'] = localStorage.getItem('auth_jwt_token');
             })
             .catch(error => {
@@ -131,7 +131,7 @@ export function updateUserMatch(profile) {
                 dispatch({
                     type: UPDATE_USER_PROFILE_GOOD
                 })
-                window.location = '/#myConnections';
+                window.location = '/codethechange.konexio-mern-stack/#myConnections';
             })
             .catch(error => {
                 console.log(error.response.data)
