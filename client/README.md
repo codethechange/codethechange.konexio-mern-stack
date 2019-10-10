@@ -15,6 +15,7 @@ $ npm run dev
 ```
 
 # Dependencies(tech-stack)
+These are our dependencies, for which the resources we use on our website.
 | Server-side
 | ---
 | bcrypt-nodejs: ^0.0.3
@@ -38,6 +39,7 @@ After signing in user can go to account page and make request to token-protected
 ![After signing in user can go to account page](http://i.imgur.com/FzLB51u.png)
 
 ## BUGs or comments
+Please let us know here if there are any issues or feedback you may have with your experience.
 [Create new Issues](https://github.com/amazingandyyy/mern-stack/issues)
 
 ## Author
