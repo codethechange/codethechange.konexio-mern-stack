@@ -20,7 +20,7 @@
     "dotenv": "^2.0.0",
     "esm": "^3.2.25",
     "express": "^4.16.2",
-    "jwt-simple": "^0.5.1",
+    "jwt-simple": "^0.5.3",
     "lodash": ">=4.17.13",
     "mongoose": "^5.7.5",
     "morgan": ">=1.9.1",
