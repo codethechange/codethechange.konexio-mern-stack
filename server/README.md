@@ -4,7 +4,7 @@ MongoDB, Express, Node
 
 # [DO THIS] jwt secret 
 type this in terminal in the main konexio-mern-stack folder
-echo "JWT_SECRET=DAA06F8C2E431B63AF0D9B2B3ED4AFF24035D3A396BB71A7F168464A5EB8127B" >> ./server/src/.env
+echo "JWT_SECRET=MSGMEFORTHEJWTSECRET" >> ./server/src/.env
 
 ## clone or download and send me PR(please)
 ```terminal
