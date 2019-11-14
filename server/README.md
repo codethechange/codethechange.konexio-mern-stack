@@ -1,15 +1,9 @@
 # server-side
 MongoDB, Express, Node
 
-
 # [DO THIS] jwt secret 
 type this in terminal in the main konexio-mern-stack folder
 echo "JWT_SECRET=MSGMEFORTHEJWTSECRET" >> ./server/src/.env
-
-## clone or download and send me PR(please)
-```terminal
-$ git clone https://github.com/amazingandyyy/mern-stack
-```
 
 ### Server-side usage(PORT: 8000)
 (I am sure you need to add a JWT_SECRET in .env to connect to MongoDB -> make it run -> check your terminal for instructions
@@ -19,6 +13,7 @@ $ cd server
 $ npm i
 $ npm run dev
 ```
+
 ### Deploy to Heroku
 docs is [here](https://github.com/amazingandyyy/mern-stack#deploy-server-to-heroku)
 
@@ -34,19 +29,9 @@ docs is [here](https://github.com/amazingandyyy/mern-stack#deploy-server-to-hero
 | mongoose: ^4.7.4
 | morgan: ^1.7.0
 
-## BUGs or comments
-[Create new Issues](https://github.com/amazingandyyy/mern-stack/issues)
 
 ## Author
 [Amazingandyyy](amazingandyyy.github.io)
-- Feel free to find me on _[GitHub](https://github.com/amazingandyyy)_ and _[LiveCoding](https://www.livecoding.tv/amazingandyyy/)_
-- or visit my _[page](http://amazingandyyy.github.io/)_
 
 ### License
 [MIT](https://github.com/amazingandyyy/eventbrite-api/blob/master/LICENSE)
-
-For future: add resume
-<div class="form-group">
-<label for="resume">Submit a Resume (Optional):</label>
-<input type="file" class="form-control-file" id="resume" />
-</div>
