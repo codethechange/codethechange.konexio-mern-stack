@@ -130,6 +130,7 @@ class SignupMentee extends Component {
 
                 <Field name="other" id="other" component="input" type="checkbox"/>
                 <label>Other</label>
+                <Field name="other-text" id="other-text" component="input" className="col-sm-2 form-control" type="text"/>
                 <br/>
               </div>
 
